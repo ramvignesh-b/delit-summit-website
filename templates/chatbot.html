@@ -1,0 +1,1162 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>#DeLit Tutorials Chatbot</title>
+<link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+<style>
+
+	@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Josefin+Sans:wght@500&family=Pattaya&family=Roboto+Slab&display=swap');
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:"Jacques Francois Shadow";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Roboto Slab";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Pattaya;
+	panose-1:0 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Josefin Sans";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:115%;
+	font-size:18.0pt;
+	font-family:"Roboto Slab";}
+h1
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:24.0pt;
+	font-family:"Josefin Sans";
+	font-weight:bold;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	line-height:115%;
+	font-size:18.0pt;
+	font-family:"Roboto Slab";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:115%;
+	font-size:18.0pt;
+	font-family:"Roboto Slab";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:115%;
+	font-size:18.0pt;
+	font-family:"Roboto Slab";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	line-height:115%;
+	font-size:18.0pt;
+	font-family:"Roboto Slab";}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style="max-width:700px; text-align:center; margin: 10px auto">
+{% include 'header.html' %}
+<div class=WordSection1>
+
+<p class=MsoNormal><span lang=EN-IN>&nbsp;</span></p>
+
+<div style='border:none;border-bottom:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:48.0pt;line-height:115%;font-family:"Jacques Francois Shadow"'>#DeLit-day
+</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:28.0pt;line-height:115%;color:red'>Building your own chatbots</span></p>
+
+</div>
+<br>
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:115%'>#DeLit-day
+Tutorials, essential-skills for everyone. </span></p>
+<p class=MsoNormal><span lang=EN-IN style='font-size:36.0pt;line-height:115%'>Summit
+Handout June 2020</span></p>
+
+<p class=MsoNormal><span lang=EN-IN>-</span><span lang=EN-IN style='font-size:
+26.0pt;line-height:115%'>-----------------------------------------------</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><b><span lang=EN-IN style='color:black'>Modules</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-IN style='color:black'>1-&gt;</span><span lang=EN-IN><a
+href="#bookmark=id.gjdgxs">What is chatbot?</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.30j0zll">Different
+platforms</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.1fob9te">Why
+dialogflow</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.3znysh7">Working of
+chatbot</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.2et92p0">Advantages
+of chatbot</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.tyjcwt">Uses of
+chatbot</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-IN style='color:black'>2-&gt;</span><span lang=EN-IN><a
+href="#bookmark=id.3dy6vkm">Getting started.</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.1t3h5sf">Creating an
+account in dialogflow</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.4d34og8">Creating an
+agent</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.2s8eyo1">Set up your
+welcome message</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.17dp8vu">Testing
+your bot</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-IN style='color:black'>3-&gt;</span><span lang=EN-IN><a
+href="#bookmark=id.3rdcrjn">Creating intents</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-IN style='color:black'>4-&gt;</span><span lang=EN-IN><a
+href="#bookmark=id.26in1rg">Prompting the user for input</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-IN style='color:black'>5-&gt;</span><span lang=EN-IN><a
+href="#bookmark=id.35nkun2">Use of prebuilt agents</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-IN style='color:black'>6-&gt;</span><span lang=EN-IN><a
+href="#bookmark=id.1ksv4uv">Implementation of small talk</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-IN style='color:black'>7-&gt;</span><span lang=EN-IN><a
+href="#bookmark=id.44sinio">Integration</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.2jxsxqh">Web demo</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none'><span lang=EN-IN><a href="#bookmark=id.z337ya">telegram</a></span><span
+lang=EN-IN style='color:#0561C2'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-IN>8<span style='color:#0561C2'>-&gt;</span></span><span
+lang=EN-IN><a href="#bookmark=id.3j2qqm3">Conclusion</a></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-IN>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN>&nbsp;</span></p>
+
+<h1><a name="bookmark=id.gjdgxs"></a><span lang=EN-IN>-What is chatbot? -</span></h1>
+
+<p class=MsoNormal style='margin-top:22.35pt;margin-right:0cm;margin-bottom:
+11.15pt;margin-left:0cm;background:white'><span lang=EN-IN style='line-height:
+115%;color:#2E2E2E'>Sometimes we wonder while messaging certain numbers or
+pages in facebook, the messages are quickly read and responded as if a human is
+interacting with us. This is due to the use of chatbots in their application.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.2pt;background:white'><span
+lang=EN-IN style='line-height:115%;color:#2E2E2E'>Chatbot can be defined as AI
+based computer program that simulates human conversations. They are also known
+as digital assistants that understand human capabilities. Bots interpret and
+process the user requests and give prompt relevant answers.&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:6.2pt;
+margin-left:36.0pt;text-indent:36.0pt;background:white'><span lang=EN-IN
+style='line-height:115%;color:#2E2E2E'><img border=0 width=367 height=182
+id=image25.jpg src="../assets/chatbot_files/image001.jpg" alt=download.jpg></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.2pt;background:white'><span
+lang=EN-IN style='line-height:115%;color:#2E2E2E'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>According to
+forbes,</span><span lang=EN-IN style='font-family:"Arial",sans-serif;
+color:#2E2E2E;background:white'> </span><span lang=EN-IN style='line-height:
+115%;color:#2E2E2E;background:white'>the&nbsp;chatbot market is forecasted to
+reach <b>$1.25 billion</b> by 2025.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.2pt;background:white'><span
+lang=EN-IN style='line-height:115%;color:#2E2E2E'>Bots can through voice as
+well as text and can be deployed across websites, applications and messaging
+channels such as Facebook Messenger, Twitter or Whatsapp or Telegram.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.2pt;background:white'><a
+name="bookmark=id.30j0zll"></a><span lang=EN-IN style='line-height:115%;
+color:#2E2E2E'>Chatbots can be developed in two formats:</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;background:white;
+border:none'><span lang=EN-IN style='line-height:115%;font-family:"Noto Sans Symbols";
+color:#2E2E2E'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#2E2E2E'>Drag and
+drop</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:6.2pt;
+margin-left:36.0pt;text-indent:-18.0pt;background:white;border:none'><span
+lang=EN-IN style='line-height:115%;font-family:"Noto Sans Symbols";color:#2E2E2E'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='line-height:115%;color:#2E2E2E'>Coding.</span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;line-height:normal;background:
+white'><b><span lang=EN-IN style='color:#282829'>Drag &amp; drop or non-coding
+based chatbot platforms</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:24.0pt;margin-bottom:
+0cm;margin-left:24.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+normal;background:white'><span lang=EN-IN style='font-size:10.0pt;font-family:
+"Noto Sans Symbols";color:#282829'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-IN style='color:#282829'>Chatfuel&nbsp;</span></b><span
+lang=EN-IN style='color:#282829'>- The user interface is simple with rich UI
+elements. Limited to Facebook only.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:24.0pt;margin-bottom:
+0cm;margin-left:6.0pt;margin-bottom:.0001pt;line-height:normal;background:white'><span
+lang=EN-IN style='color:#282829'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:24.0pt;margin-bottom:
+0cm;margin-left:24.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+normal;background:white'><span lang=EN-IN style='font-size:10.0pt;font-family:
+"Noto Sans Symbols";color:#282829'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-IN style='color:#282829'>Motion AI</span></b><span
+lang=EN-IN style='color:#282829'>&nbsp;- With simple interface and
+customization, it is beneficial in bringing many services together and automating
+several internal processes.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:24.0pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal;background:white'><span
+lang=EN-IN style='color:#282829'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:24.0pt;margin-bottom:
+0cm;margin-left:24.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+normal;background:white'><span lang=EN-IN style='font-size:10.0pt;font-family:
+"Noto Sans Symbols";color:#282829'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-IN style='color:#282829'>Chattabot</span></b><span
+lang=EN-IN style='color:#282829'>&nbsp;- It is ready to use -Bot Platforms-
+with lots of features</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:24.0pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal;background:white'><span
+lang=EN-IN style='color:#282829'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:24.0pt;margin-bottom:
+0cm;margin-left:24.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+normal;background:white'><span lang=EN-IN style='font-size:10.0pt;font-family:
+"Noto Sans Symbols";color:#282829'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-IN style='color:#282829'>Botsify&nbsp;</span></b><span
+lang=EN-IN style='color:#282829'>- It is quite similar to Chatfuel and mainly
+used for creating bots for Facebook Messengers. Also allows wordpress
+integration.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;border:none'><span lang=EN-IN
+style='line-height:115%;color:#282829'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:24.0pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal;background:white'><span
+lang=EN-IN style='color:#282829'>The main disadvantage is the lack of NLP of
+data.</span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;line-height:normal;background:
+white'><span lang=EN-IN style='color:#282829'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;line-height:normal;background:
+white'><b><span lang=EN-IN style='color:#282829'>Code-based platforms</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;border:none'><span lang=EN-IN style='font-family:"Noto Sans Symbols";
+color:#282829'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='color:#282829'>IBM Watson - AI based flow
+builder with natural language understanding.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:12.0pt;
+margin-left:36.0pt;text-indent:-18.0pt;line-height:normal;background:white;
+border:none'><span lang=EN-IN style='font-family:"Noto Sans Symbols";
+color:#282829'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='color:#282829'>Wit - It is easy for
+developers to build applications that you can talk or text to. You can also
+create unique stories for your chatbot</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;border:none'><span lang=EN-IN style='font-family:"Noto Sans Symbols";
+color:#282829'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='color:#282829'>Microsoft Bot Framework -
+Allow you to connect to multiple messaging platforms including Slack, Facebook
+Messenger, Skype, Telegram, etc</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;border:none'><span lang=EN-IN
+style='line-height:115%;color:#282829'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:12.0pt;
+margin-left:36.0pt;line-height:normal;background:white;border:none'><span
+lang=EN-IN style='color:#282829'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.2pt;background:white'><a
+name="bookmark=id.1fob9te"></a><b><u><span lang=EN-IN style='line-height:115%;
+color:#2E2E2E'>Why dialogflow?</span></u></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.2pt;background:white'><span
+lang=EN-IN style='line-height:115%;color:#2E2E2E'>For our tutorial, we will be
+using <b>dialogflow</b> because of the following advantages:</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.2pt;background:white'><span
+lang=EN-IN style='line-height:115%;color:#2E2E2E'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:72.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;
+background:white;border:none'><span lang=EN-IN style='font-family:Symbol;
+color:#2E2E2E'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#2E2E2E'>Free to
+use for small and medium business</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:72.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;
+background:white;border:none'><span lang=EN-IN style='font-family:Symbol;
+color:#2E2E2E'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#2E2E2E'>Can be
+deployed in many platforms</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:72.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;
+background:white;border:none'><span lang=EN-IN style='font-family:Symbol;
+color:#2E2E2E'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#2E2E2E'>No coding</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:72.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;
+background:white;border:none'><span lang=EN-IN style='font-family:Symbol;
+color:#2E2E2E'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#2E2E2E'>Uses
+Natural language processing,machine learning.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:72.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;
+background:white;border:none'><span lang=EN-IN style='font-family:Symbol;
+color:#2E2E2E'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#2E2E2E'>Easy to
+implement </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:72.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;
+background:white;border:none'><span lang=EN-IN style='font-family:Symbol;
+color:#2E2E2E'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#2E2E2E'>The
+chatbot can be developed in multiple languages.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.2pt;margin-left:72.0pt;text-indent:-18.0pt;background:white;
+border:none'><span lang=EN-IN style='line-height:115%;font-family:Symbol;
+color:#2E2E2E'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#292929;
+background:white'>You can export JSON file</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.3znysh7"></a><b><u><span lang=EN-IN
+style='line-height:115%'>How does chatbot works:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>The chatbot using
+dialogflow works on the principle of NLP (Natural Language Processing)</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%;color:#2E2E2E;
+background:white'>NLU is the ability of the chatbot to understand a human. It
+is the process of converting text into structured data for a machine to
+understand. NLU follows three specific concepts. They are: entities, context,
+and expectations.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=593 height=179 id=image32.png src="../assets/chatbot_files/image002.jpg"></span></p>
+
+<p class=MsoNormal><a name="bookmark=id.2et92p0"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Advantages of using chatbots:</span></u></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;font-family:"Noto Sans Symbols";color:#333333;
+background:white'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#333333;
+background:white'>Reduce customer waiting time</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;font-family:"Noto Sans Symbols";color:#333333;
+background:white'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#333333;
+background:white'>24-7 availability</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;font-family:"Noto Sans Symbols";color:#333333;
+background:white'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#333333;
+background:white'>Better customer engagement</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;font-family:"Noto Sans Symbols";color:#333333;
+background:white'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='line-height:115%;color:#333333;
+background:white'>Save customer service costs</span></p>
+
+<p class=MsoNormal><b><u><span lang=EN-IN style='line-height:115%;color:#333333;
+background:white'><span style='text-decoration:none'>&nbsp;</span></span></u></b></p>
+
+<p class=MsoNormal><a name="bookmark=id.tyjcwt"></a><b><u><span lang=EN-IN
+style='line-height:115%;color:#333333;background:white'>Use of chatbots:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%;color:#333333;
+background:white'>The use of chatbot for various purposes in shown as a chart
+below:</span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-family:"Arial",sans-serif;
+color:#333333'><img border=0 width=535 height=248 id=image34.png
+src="../assets/chatbot_files/image003.jpg"></span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>At the end of this
+course you will be able to build a simple chatbot within 10 mins and deploy in
+one of the platforms that is telegram.And you will be able to converse with my
+developed chatbot.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.3dy6vkm"></a><b><u><span lang=EN-IN
+style='line-height:115%'>GETTING STARTED:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>----------- Before
+starting our journey in creating our own chatbot,you can work and see how my
+chatbot which I have developed for the registration of alumni- for DeLit
+summit -2020- by typing <b><span style='color:red'>@Bavani_bot</span> in
+telegram.</b></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>-Excited to start
+learning !!!- Let-s begin </span></p>
+
+<p class=MsoNormal><span lang=EN-IN>-------- </span></p>
+
+<p class=MsoNormal><span lang=EN-IN>--------------- </span><span lang=EN-IN
+style='line-height:115%'>For this tutorial you don-t need to install any
+software into your computer so you will not have any installation
+problems.That-s a good news indeed.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>All you need is a
+google account and google chrome with good internet connection.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>In case if you
+have any doubt while creating this chatbot I have attached the links with the
+content.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.1t3h5sf"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Part-1: Creating an account in dialogflow</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Open google chrome
+and type dialogflow in the search tab.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=493 height=255
+id=image27.png src="../assets/chatbot_files/image004.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN>-</span><span lang=EN-IN style='line-height:
+115%'>Click the 1<sup>st</sup> website that appears on the screen to get
+started in creating your own chatbots.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=262
+id=image36.png src="../assets/chatbot_files/image005.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Once you enter
+into the website you will see the home page of the dialogflow.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>If you have
+already had an account in dialogflow click go to console</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Else click sign up
+for free and click the google account that you want to link your chatbots.
+Incase if you don-t have a google account then create an account in order to
+use dialogflow.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=544 height=227
+id=image31.png src="../assets/chatbot_files/image006.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>If you already
+have an account linked with dialogflow then you will directed to the bot which
+you have already created via this platform.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=259
+id=image29.png src="../assets/chatbot_files/image007.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Now click the
+three lines icon on the top left corner.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=388 height=50
+src="../assets/chatbot_files/image008.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>On clicking the
+icon, you will get a side bar with lot of options.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=262
+id=image33.png src="../assets/chatbot_files/image009.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>To create a new
+agent click the drop down menu and click create new agent to create a new
+chatbot.</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.4d34og8"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Part-2: Creating your agent</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>What is an agent?</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%;color:#DDD9C4;
+background:white'>A Dialogflow&nbsp;<i>agent</i>&nbsp;is a virtual agent that
+handles conversations with your end-users. It is a natural language
+understanding module that understands the nuances of human language. Dialogflow
+translates end-user text or audio during a conversation to structured data that
+your apps and services can understand. You design and build a Dialogflow agent
+to handle the types of conversations required for your system.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%;color:#202124;
+background:white'>In other words, the bot which you are going to develop is
+called as agent.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:10.0pt;line-height:115%;
+font-family:"Arial",sans-serif;color:#202124;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=260
+id=image42.png src="../assets/chatbot_files/image010.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Now type your
+chatbot name that you want to develop in the agent name text field .</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Since in this
+tutorial i am going to create a chatbot for booking rooms in hotels my agent
+name is Hotelbookingchatbot-Tutorial</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>-(NOTE: There
+should be <b><u><span style='color:#4F81BD'>no space</span></u></b> between the
+words while you type the bot name)</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=262
+id=image35.png src="../assets/chatbot_files/image011.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Click the language
+in which you want to develop your bot (there are nearly <u><span
+style='color:#4F81BD'>23 languages</span></u> which are supported by
+dialogflow) and the time zone and click create. When the create button is
+clicked the tab changes to working and your bot is being prepared to start its
+actions.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=260
+id=image30.png src="../assets/chatbot_files/image012.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>When your bot is
+successfully created you would get a screen as shown with two default intents:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>1. Default welcome
+intent.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>2.Default fallback
+intent.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=262
+id=image39.png src="../assets/chatbot_files/image013.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>The default
+welcome intent is the place where the 1<sup>st</sup> message of your bot
+displays when the user starts the conversation with the bot. It is similar to
+constructors<sup>1</sup> which gets executed automatically when the
+conversation begins.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>The default
+fallback intent is one which displays the message to the user when the user
+types a sentence/phrase which the bot could not understand or the phrase which
+does not match with the training phrases</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.2s8eyo1"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Part-3: Set up your welcome message</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Now to check
+whether the bot which we created is working properly click the default welcome
+intent </span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=262
+id=image43.png src="../assets/chatbot_files/image014.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>The above page
+appears and in the response tab you can type your own response or have the
+default responses of the bot. The snapshot below shows the default responses
+when the user begins the conversation.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=263
+id=image44.png src="../assets/chatbot_files/image015.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>If you want your
+own response then click the delete button on the right .</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Then click add
+responses and click text</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=264
+id=image40.png src="../assets/chatbot_files/image016.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>And type the
+response that you want to display.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=581 height=217
+id=image45.png src="../assets/chatbot_files/image017.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%;color:#292929;
+background:white'>Don-t forget to always&nbsp;<b>Save</b>&nbsp;before you test
+the Intent or if you leave the page. Otherwise the changes won-t take effect.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=259
+id=image41.png src="../assets/chatbot_files/image018.jpg"></span><span lang=EN-IN
+style='line-height:115%;color:#292929'>Also, you should wait for Dialogflow-s
+training to be complete if you know you did everything right, but it-s not
+working. Two pop-ups will appear in the bottom right corner of the screen when
+the Agent started and finished training.</span></p>
+
+<p class=MsoNormal style='margin-top:24.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;background:white'><span lang=EN-IN
+style='font-size:13.0pt;line-height:115%;font-family:"Georgia",serif;
+color:#292929'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#F2F2F2'><span lang=EN-IN style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:5.0pt;line-height:normal;background:
+#F2F2F2'><span lang=EN-IN style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'><img border=0 width=594 height=78 id=image37.png
+src="../assets/chatbot_files/image019.jpg"
+alt="https://miro.medium.com/max/741/1*9ouSnNCrvM2sQs5Z-tFvyg.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN>&nbsp;</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.17dp8vu"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Part-4: Testing your bot</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Now we have
+trained our bot to welcome the user when the user starts the conversation.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>To check whether
+it is working properly type hello in the side pane </span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=544 height=266 id=image38.png src="../assets/chatbot_files/image020.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>When you press
+enter you will able to see the response below that you gave in the response tab
+of default welcome intent.In case you didn-t get check whether you have enabled
+the service key of your google account.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=550 height=216 id=image20.png src="../assets/chatbot_files/image021.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Now the bot is
+successfully developed and tested. Now we will continue to develop the bot with
+the logic for further conversation.</span></p>
+<iframe style="display:block;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/z-l9U03JnRg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class=MsoNormal><span lang=EN-IN><a href="https://youtu.be/z-l9U03JnRg"><span
+style='line-height:115%'>https://youtu.be/z-l9U03JnRg</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.3rdcrjn"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Creating Intents:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>First we will
+create an intent to book a room in the hotel . To create an intent click create
+intent on the right side of the home page.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=577 height=135 id=image26.png src="../assets/chatbot_files/image022.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>A new intent will
+be created now type the name that you want to create.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=602 height=259 id=image14.png src="../assets/chatbot_files/image023.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Next we have to
+train the bot with the phrases that the customer uses to chat with the bot.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>You can train the
+bot in the training phrase section.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=602 height=260 src="../assets/chatbot_files/image024.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>These are the list
+of expressions that I have used in the training phrase for booking a room in
+the hotel.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Here you can
+notice the top 2 phrases that the number 2 has been coloured with different
+colours such as brown and yellow.Those are called as entities.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=591 height=82 id=image24.png src="../assets/chatbot_files/image025.jpg"></span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='line-height:115%;color:#222222;
+background:white'>Entities</span></b><span lang=EN-IN style='line-height:115%;
+color:#222222;background:white'>&nbsp;are a mechanism in&nbsp;<b>Dialogflow</b>&nbsp;for
+identifying and extracting useful data from natural-language inputs.&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:24.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal;background:white;
+border:none'><span lang=EN-IN style='color:#EEECE1'>An Entity is a property
+which can be used by Dialogflow to answer the request from the user - the
+entity will usually be a keyword within the request such as a name, date,
+location etc. When the user speaks or types their request, Dialogflow will look
+for the entity and the value of the given entity can be used within the
+request.</span></p>
+
+<p class=MsoNormal style='margin-top:24.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal;background:white;
+border:none'><span lang=EN-IN style='color:#292929'>Dialogflow already contains
+a set of pre-defined system entities like </span><u><span lang=EN-IN
+style='color:#4F81BD'>(@sys.number, @sys.duration, @sys.person)</span></u><span
+lang=EN-IN style='color:#292929'> which can be used when constructing intent.
+The intents that you have used in the training phrases can be seen in the
+Action and Parameter block.</span></p>
+
+<p class=MsoNormal style='margin-top:24.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal;background:white;
+border:none'><span lang=EN-IN style='font-size:13.0pt;font-family:"Georgia",serif;
+color:#292929'><img border=0 width=602 height=202 id=image22.png
+src="../assets/chatbot_files/image026.jpg"></span></p>
+
+<p class=MsoNormal><b><u><span lang=EN-IN style='line-height:115%'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></b></p>
+
+<p class=MsoNormal><a name="bookmark=id.26in1rg"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Prompting input from the user:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Now we have ask
+the customer about the no of nights of stay and the number of rooms that he
+wants to stay in the hotel.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>This can be done
+in the Actions and parameters section.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=602 height=259 id=image19.png src="../assets/chatbot_files/image027.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Since both the
+inputs are required for room booking check the checkbox of required column and
+type the message that you want to prompt the user when he fails to provide the
+input.The message can be typed in the prompts column.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=602 height=183 id=image21.png src="../assets/chatbot_files/image028.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=602 height=224 id=image23.png src="../assets/chatbot_files/image029.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Type the message
+and click close.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Similarly create
+prompts for name, email and phone-number.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=574 height=258 id=image28.png src="../assets/chatbot_files/image030.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.lnxbz9"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Displaying the user name at the response tab:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>To display the
+user-s name at the response tab type <u><span style='color:#548DD4'>$(name of
+the entity)</span></u> which is present in the value column of the action
+section.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=586 height=212 id=image6.png src="../assets/chatbot_files/image031.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Now we will create
+another intent for displaying the hotel info such as address and phone-number.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=602 height=259 id=image8.png src="../assets/chatbot_files/image032.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=593 height=263 id=image7.png src="../assets/chatbot_files/image033.jpg"></span></p>
+
+<p class=MsoNormal><a name="bookmark=id.35nkun2"></a><b><u><span lang=EN-IN
+style='line-height:115%'>PRE-BUILD AGENTS:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Sometimes if you
+don-t want to build from scratch. You can use the templates which are already
+developed for certain topics by dialogflow.You can access them in the prebuild
+agents in the side menu.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=586 height=249
+id=image12.png src="../assets/chatbot_files/image034.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=578 height=260
+id=image17.png src="../assets/chatbot_files/image035.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>A lot of options
+are available.select the bot which you want to implement. Click import </span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=262
+id=image15.png src="../assets/chatbot_files/image036.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>The bot will be
+created automatically with the intents and training phrases, you can add the
+response of the required type which you want to present to the users and also
+additional intents that you want.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN>&nbsp;</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.1ksv4uv"></a><b><u><span lang=EN-IN
+style='line-height:115%'>SMALL TALKS:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%;color:#202124;
+background:white'>Small talk is used to provide responses to casual
+conversation like appreciation, thankful and some common conversation. This
+feature can greatly improve the end-user experience by answering common
+questions outside the scope of your agent.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%;color:#202124;
+background:white'>To enable small talk for your chatbot click small talk on the
+side menu and click enable and click save.</span></p>
+
+<p class=MsoNormal><b><u><span lang=EN-IN style='line-height:115%'><img
+border=0 width=602 height=267 id=image11.png src="../assets/chatbot_files/image037.jpg"></span></u></b></p>
+
+<p class=MsoNormal><b><u><span lang=EN-IN style='line-height:115%'><img
+border=0 width=602 height=266 id=image16.png src="../assets/chatbot_files/image038.jpg"></span></u></b></p>
+
+<p class=MsoNormal><b><u><span lang=EN-IN style='line-height:115%'><img
+border=0 width=494 height=186 id=image13.png src="../assets/chatbot_files/image039.jpg"></span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>So when the
+customer types you did well the bot automatically replies with the message I-m
+glad you think so with the help of small talk and the developer don-t need to
+train the bot with these phrases.</span></p>
+
+<iframe style="display:block;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/idvS8KLgsoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p class=MsoNormal><span lang=EN-IN><a href="https://youtu.be/idvS8KLgsoM"><span
+style='line-height:115%'>https://youtu.be/idvS8KLgsoM</span></a></span><a
+name="bookmark=id.44sinio"></a></p>
+
+<p class=MsoNormal><b><u><span lang=EN-IN style='line-height:115%'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></b></p>
+
+<p class=MsoNormal><b><u><span lang=EN-IN style='line-height:115%'>Last Step:
+Integration </span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Chatbot can be
+integrated in different platforms like facebook messenger, whatsapp, twitter, slack,
+telegram for messages and telephony gateway for calls.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>In this tutorial
+we will be integrating it in telegram.</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.2jxsxqh"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Web demo:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Web demo is
+provided by the dialogflow itself which provides a chat screen for conversing
+with the chatbot.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>This can be done
+by clicking integrations in the side menu and click web demo</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=563 height=201 src="../assets/chatbot_files/image040.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>And when you swipe
+the slider of web demo</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=80 height=35 id=image1.png src="../assets/chatbot_files/image041.jpg"></span><span
+lang=EN-IN style='line-height:115%'>-</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>, you will get a
+dialogbox as shown below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=603 height=226 id=image2.png src="../assets/chatbot_files/image042.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Click the link
+which is shown and you will be directed to the chatbot page.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'><img border=0
+width=602 height=259 id=image3.png src="../assets/chatbot_files/image043.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Here you can
+converse with your chatbot.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>The working is
+shown in the link below.</span></p>
+
+<p class=MsoNormal><a name="bookmark=id.z337ya"></a><b><u><span lang=EN-IN
+style='line-height:115%'>Integration with telegram:</span></u></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='line-height:115%'>Before integrating
+with telegram you have to perform some steps to make your chatbot work gobally.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;font-family:"Noto Sans Symbols";color:black'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='line-height:115%;color:black'>In telegram search <b>@BotFather</b>
+. </span><span lang=EN-IN style='line-height:115%;color:#292929;background:
+white'>Then click on the verified, official BotFather (it will have a blue tick
+beside its name).</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span lang=EN-IN><img border=0
+width=473 height=262 id=image10.png src="../assets/chatbot_files/image044.jpg"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;font-family:"Noto Sans Symbols";color:black'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='line-height:115%;color:black'>To create a new bot type <b>/newbot</b>
+</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;font-family:"Noto Sans Symbols";color:black'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='line-height:115%;color:#292929;background:white'>Answer the
+BotFather-s questions and&nbsp;choose a name and a username for your bot.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;border:none'><b><span lang=EN-IN
+style='line-height:115%;color:black'><img border=0 width=485 height=186
+id=image9.png src="../assets/chatbot_files/image045.jpg"></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;border:none'><span lang=EN-IN
+style='line-height:115%;color:#292929;background:white'>If the username you
+choose is already associated to another bot, BotFather will ask you change it
+until you find a free username.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;border:none'><b><span lang=EN-IN
+style='line-height:115%;color:black'><img border=0 width=485 height=168
+id=image5.png src="../assets/chatbot_files/image046.jpg"></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;border:none'><span lang=EN-IN
+style='line-height:115%;color:#292929;background:white'>When you-ve chosen a
+free username, BotFather will give you the token you need along with other
+information.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;border:none'><b><span lang=EN-IN
+style='line-height:115%;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;border:none'><b><span lang=EN-IN
+style='line-height:115%;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;border:none'><span lang=EN-IN
+style='color:black'><img border=0 width=482 height=224 id=image18.png
+src="../assets/chatbot_files/image047.jpg"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>Now in the dialogflow swipe the
+telegram slider and</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>Paste the api token key in the
+textfield shown.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><b><span
+lang=EN-IN style='line-height:115%;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><b><span
+lang=EN-IN style='line-height:115%;color:black'><img border=0 width=522
+height=222 id=image4.png src="../assets/chatbot_files/image048.jpg"></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><b><span
+lang=EN-IN style='line-height:115%;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>Finally click the start button
+to establish your bot in</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>Telegram platform.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>Now in the search pane type the
+user name or bot </span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>name in telegram and you will
+be able to find your</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>bot worldwide available to all
+the users.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>&nbsp;</span></p>
+<iframe style="display:block;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/bSKO-lo33Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN><a href="https://youtu.be/bSKO-lo33Ic"><span style='line-height:
+115%'>https://youtu.be/bSKO-lo33Ic</span></a></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-36.0pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>Hurray!!! Your 1<sup>st</sup>
+chatbot is ready and established globally.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;border:none'><a
+name="bookmark=id.3j2qqm3"></a><b><u><span lang=EN-IN style='line-height:115%;
+color:black'>CONCLUSION:</span></u></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>So now you can surprise your
+friends and family with the simple bot that you can create within 10 mins.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>Happy Learning.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;border:none'><span
+lang=EN-IN style='line-height:115%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN>Please take up this quiz in order to
+complete this tutorial. </span></p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfu5LiMpCs95cbrA8Mt3JmW3GOdRblzP4Rl0J4SEaNVuYIM7Q/viewform?embedded=true" width="640" height="3134" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+<p class=MsoNormal><span lang=EN-IN style='font-family:Pattaya'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

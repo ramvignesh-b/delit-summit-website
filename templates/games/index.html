@@ -1,0 +1,351 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                /* background: url('./avgn.jpg'); */
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: teal;
+            }
+            .card{
+                margin: 20px 10px;
+                /* border: 1px solid #f8f8f8; */
+                box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+                transition: .3s;
+                text-align: center;
+            }
+            .card:hover {
+                box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+                transform: scale(1.03,1.03);
+            }
+            .caption1{
+                padding: 20px 10px;
+            }
+            a{
+                color: #1f1f1f;
+            }
+            a:hover{
+                text-decoration: unset;
+                color: teal;
+                
+            }
+            img{
+                object-fit: cover;
+            }
+            .inframe{
+                padding: 10px 5px;
+                margin: 10px;
+                text-align: center;
+                background-color: rgba(255,255,255,0.2);
+                /* background-color: rgba(0,0,0,0.2); */
+                
+            }
+            h1{
+                text-align: center;
+                padding: 10px;
+                /* font-family:  */
+                background-clip: #f0f0f0;
+            }
+            h2{
+                font-size: 24px;
+            }
+            .container{
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+        </style>
+        <link rel="stylesheet" href="assets/css/styles.min.css">
+    </head>
+    <body>
+<!--         <header class="d-xl-flex justify-content-xl-center" style="width: 100vw;">
+            <input
+                    type="checkbox"
+                    id="main-navigation-toggle"
+                    class="btn btn--close"
+                    title="Toggle main navigation"
+                    style="z-index: 400"
+                  />
+                  <label for="main-navigation-toggle" style="z-index: 400">
+                    <span id="ham" style="text-align: center; font-family: 'Josefin Sans'; z-index: 400"
+                      >LINKS</span
+                    >
+                  </label>
+                    <div id="main-navigation" class="nav-main">
+                        <div class="d-flex justify-content-center align-items-center menu" style="text-align: center;">
+                            <ul class="list-unstyled text-uppercase text-center" style="list-style-type: none;font-size: 60px;font-family: 'Josefin Sans', sans-serif;font-weight: normal;font-style: normal;letter-spacing: 4px;line-height: 100px;">
+                                <li><a href="home">Home</a></li>
+                                <li><a href="webinar">Webinar</a></li>
+                                <li><a href="games">Games</a></li>
+                                <li><a href="tutorials">Tutorials</a></li>
+                                <li><a href="events">Lit Events</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header> -->
+                {% include 'header.html' %}
+        <h1 style="font-family: 'Jacques Francois Shadow', sans-serif; color: black;"> #DeLit - Games </h1>
+        <div class="container ">
+            <h2> Quarantine Quiz </h2>
+            <!-- <p> Take a break from your break.</p> -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <a target="_blank" href="https://theatomize.typeform.com/to/Snkasozz">
+                        <div class="card">
+                            <img src="assets/img/games/harry.jpg" height="200">
+                            <div class="caption1">
+                                Harry Potter
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a target="_blank" href="https://theatomize.typeform.com/to/lDLE9R8Y">
+                        <div class="card">
+                            <img src="assets/img/games/got.jpg" height="200">
+                            <div class="caption1">
+                                Game of Thrones
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a target="_blank" href="https://theatomize.typeform.com/to/f5BB3I6n">
+                        <div class="card">
+                            <img src="assets/img/games/moneyHeist.jpg" height="200">
+                            <div class="caption1">
+                                Money Heist 
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a target="_blank" href="https://theatomize.typeform.com/to/FmEj9zjb">
+                        <div class="card">
+                            <img src="assets/img/games/friends.jpg" height="200">
+                            <div class="caption1">
+                                Friends 
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a target="_blank" href="https://theatomize.typeform.com/to/BT7mPAma">
+                        <div class="card">
+                            <img src="assets/img/games/marvel.jpg" height="200">
+                            <div class="caption1">
+                                Marvel 
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a target="_blank" href="https://theatomize.typeform.com/to/JsvIyljw">
+                        <div class="card">
+                            <img src="assets/img/games/strangerThings.jpg" height="200">
+                            <div class="caption1">
+                                Stranger Things 
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container-fluid" style="background-color:#f0f0f0;">
+            <div class="container">
+                <h2> Crosswords </h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/crossword1.html">
+                            <div class="card">
+                                <img src="assets/img/games/crossword.png" height="200">
+                                <div class="caption1">
+                                    Crossword 1
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/crossword2.html">
+                            <div class="card">
+                                <img src="assets/img/games/cross.jpeg" height="200">
+                                <div class="caption1">
+                                    Crossword 2
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/crossword3.html">
+                            <div class="card">
+                                <img src="assets/img/games/cross3.jpeg" height="200">
+                                <div class="caption1">
+                                    Crossword 3
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/crossword4.html">
+                            <div class="card">
+                                <img src="assets/img/games/cross2.jpg" height="200">
+                                <div class="caption1">
+                                    Crossword 4 
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/crossword5.html">
+                            <div class="card">
+                                <img src="assets/img/games/crossword.png" height="200">
+                                <div class="caption1">
+                                    Crossword 5 
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>  
+            <div class="container ">
+                <h2> Flash Games</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <a target="_blank" href="https://scratch.mit.edu/projects/403069662">
+                            <div class="card" >
+                                <img src="assets/img/games/dpl.jpg" height="200">
+                                <div class="caption1">
+                                    De-Lit Premeir league
+                                </div>
+                                
+                                <!-- <iframe src="https://scratch.mit.edu/projects/403069662/embed" allowtransparency="true" width="100%" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
+                            </div>
+                        </a>
+                        <!-- <a target="_blank" href="" class="btn btn-primary" style="margin:5px;"> Open in Full Screen </a> -->
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a target="_blank" href="https://scratch.mit.edu/projects/405291800">                    
+                            <div class="card" >
+                                <img src="assets/img/games/saveLego.jpg" height="200">
+                                <div class="caption1">
+                                    Rescue the Lego's
+                                </div>
+                                <!-- <iframe src="https://scratch.mit.edu/projects/405291800/embed" allowtransparency="true" width="100%" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
+                                <!-- <a target="_blank" href="https://scratch.mit.edu/projects/405291800" class="btn btn-primary" style="margin:5px;"> Open in Full Screen </a>                         -->
+                            </div> 
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a target="_blank" href="https://scratch.mit.edu/projects/405313333">
+                            <div class="card" >
+                                <img src="assets/img/games/delitHoop.jpg" height="200">
+                                <div class="caption1">
+                                    De-Lit Hoops
+                                </div>
+                                <!-- <iframe src="https://scratch.mit.edu/projects/405313333/embed" allowtransparency="true" width="100%" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
+                                <!-- <a target="_blank" href="https://scratch.mit.edu/projects/405313333" class="btn btn-primary" style="margin:5px;"> Open in Full Screen </a>                         -->
+                            </div> 
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">                       
+                        <a target="_blank" href="https://scratch.mit.edu/projects/405825151">
+                            <div class="card" >
+                                <img src="assets/img/games/delitDunk.jpg" height="200">
+                                <div class="caption1">
+                                    De-Lit Dunk
+                                </div>
+                                <!-- <iframe src="https://scratch.mit.edu/projects/405825151/embed" allowtransparency="true" width="100%" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>      -->
+                                <!-- <a target="_blank" href="https://scratch.mit.edu/projects/405825151" class="btn btn-primary" style="margin:5px;"> Open in Full Screen </a>                         -->
+                            </div> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <div class="container-fluid" style="background-color:#ade6db59;">
+            <div class="container ">
+                <h2> Jeopardy </h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/Grammer-basic.html">
+                            <div class="card">
+                                <img src="assets/img/games/jeopardy.jpg" height="200">
+                                <div class="caption1">
+                                    Grammer Basic
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/Grammer-pre-intermediate.html">
+                            <div class="card">
+                                <img src="assets/img/games/jeopardy.jpg" height="200">
+                                <div class="caption1">
+                                    Grammer Pre-Intermediate
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/advanced-grammer.html">
+                            <div class="card">
+                                <img src="assets/img/games/jeopardy.jpg" height="200">
+                                <div class="caption1">
+                                    Advanced Grammer
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/cricket-maniacs.html">
+                            <div class="card">
+                                <img src="assets/img/games/jeopardy.jpg" height="200">
+                                <div class="caption1">
+                                    Cricket Maniacs
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="assets/the-famous-trends-of-social-media.html">
+                            <div class="card">
+                                <img src="assets/img/games/jeopardy.jpg" height="200">
+                                <div class="caption1">
+                                    Social Media Trends
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container ">
+                <h2> Scavenger Hunt</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <a target="_blank" href="https://forms.gle/YTKC4S4CGHEuP8Ub9">
+                            <div class="card" >
+                                <img src="assets/img/games/avgn.jpg" height="200">
+                                <div class="caption1">
+                                    SCAVENGER HUNT
+                                </div>
+                                <!-- <iframe src="https://scratch.mit.edu/projects/403069662/embed" allowtransparency="true" width="100%" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
+                            </div>
+                        </a>
+                        <!-- <a target="_blank" href="" class="btn btn-primary" style="margin:5px;"> Open in Full Screen </a> -->
+                        
+                    </div>
+                </div>
+            </div>
+            {% include 'footer.html' %}
+    </body>
+</html>
+
+

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>DeLit Summit</title>
+    <meta name="twitter:description" content="Welcom to the #DeLit virtual Summit! Lots and lots of games, webinars, tutorials and events awaits.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="#Delit Summit">
+    <meta property="og:description" content="Welcom to the #DeLit virtual Summit!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../assets/img/pec_logo.png">
+    <meta name="description" content="Welcom to the #DeLit virtual Summit! Lots and lots of games, webinars, tutorials and events awaits.">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon2.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link
+	rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  />
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+	<link rel="stylesheet" href="../assets/css/cards.css">
+	<style>
+		
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+ .ccols{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+ .ccol{
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    max-width: 200px;
+    cursor: pointer;
+  }
+  
+  .container1{
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+      -webkit-perspective: 1000px;
+              perspective: 1000px;
+  }
+  
+  .front,
+  .back{
+    background-size: cover;
+      background-position: center;
+      -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      text-align: center;
+      min-height: 200px;
+      height: auto;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+  }
+  
+  .back{
+    background: #2e8690 ;
+    background: -webkit-linear-gradient(45deg,  #cedce7 0%,#2e8690 100%);
+    background: -o-linear-gradient(45deg,  #cedce7 0%,#2e8690  100%);
+    background: linear-gradient(45deg,  #cedce7 0%,#2e8690  100%);
+  }
+  
+  .front:after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      content: '';
+      display: block;
+      opacity: .6;
+      background-color: #000;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      border-radius: 10px;
+  }
+  .container1:hover .front,
+  .container1:hover .back{
+      -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+  
+  .back{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+  }
+  
+  .inner{
+      -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+              transform: translateY(-50%) translateZ(60px) scale(0.94);
+      top: 55%;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 2rem;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      outline: 1px solid transparent;
+      -webkit-perspective: inherit;
+              perspective: inherit;
+      z-index: 2;
+  }
+  
+  .container1 .back{
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+  }
+  
+  .container1 .front{
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+  }
+  
+  .container1:hover .back{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  
+  .container1:hover .front{
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  
+  .front .inner p{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .front .inner p:after{
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #dadada;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+  }
+  
+  .front .inner span{
+    color: rgba(216, 216, 216, 0.7);
+    font-family: 'Montserrat';
+    font-weight: 300;
+  }
+  
+  @media screen and (max-width: 64rem){
+   .ccol{
+      width: calc(33.333333% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 48rem){
+   .ccol{
+      width: calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 32rem){
+   .ccol{
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+  }
+
+  a {
+      color: rgb(236, 236, 236);
+      text-decoration: none;
+  }
+
+  a:hover {
+	  color: black;
+  }
+
+	</style>
+<!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('a83kt7txaivx');
+</script>
+<!-- End of Async Drift Code -->
+</head>
+
+<body>
+    <header class="d-xl-flex justify-content-xl-center" style="width: 100vw;">
+<input
+        type="checkbox"
+        id="main-navigation-toggle"
+        class="btn btn--close"
+        title="Toggle main navigation"
+        style="z-index: 400"
+      />
+      <label for="main-navigation-toggle" style="z-index: 400">
+        <span id="ham" style="text-align: center; font-family: 'Josefin Sans'; z-index: 400"
+          >LINKS</span
+        >
+      </label>
+        <div id="main-navigation" class="nav-main">
+            <div class="d-flex justify-content-center align-items-center menu" style="text-align: center;">
+                <ul class="list-unstyled text-uppercase text-center" style="list-style-type: none;font-size: 60px;font-family: 'Josefin Sans', sans-serif;font-weight: normal;font-style: normal;letter-spacing: 4px;line-height: 100px;">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="webinar">Webinar</a></li>
+                    <li><a href="games">Games</a></li>
+                    <li><a href="tutorials">Tutorials</a></li>
+                    <li><a href="events">Lit Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+	<main style="width: 100vw;">
+		<section style="margin-top: 15vh;">
+			<div class="wrapper">
+				<h1 style="text-align: center; font-size: 3em; color: #2e8690; font-family: 'Josefin Slab', sans-serif;">- Tutorials -</h1>
+				<h4 style="text-align: center; font-weight: 400;">Click on | hover over the tiles to visit the tutorials.</h4>
+				<div class="ccols">
+				  
+				<div class="ccol" ontouchstart="this.classList.toggle('hover');">
+				  <div class="container1">
+					<div
+					  class="front"
+					  style="background-image: url(../assets/img/thumbnails/XD.svg);"
+					>
+					  <div class="inner">
+						<p><br></p>
+						<span><img src="../assets/img/thumbnails/XD.svg" width="120px"/></span>
+					  </div>
+					</div>
+					<div class="back">
+					  <div class="inner">
+						<p>
+							<a href="/tutorials/XD">Prototyping with XD</a>
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="ccol" ontouchstart="this.classList.toggle('hover');">
+				  <div class="container1">
+					<div class="front" style ="background: url('../assets/img/thumbnails/PS.svg')">
+					  <div class="inner">
+						<p><br></p>
+						<span><img src="../assets/img/thumbnails/PS.svg" width="120px"/></span>
+					  </div>
+					</div>
+					<div class="back">
+					  <div class="inner">
+						<p>
+							<a href="/tutorials/Photoshop">Photoshop Essentials</a>
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="ccol" ontouchstart="this.classList.toggle('hover');">
+				  <div class="container1">
+					<div
+					  class="front"
+					  style="background-image: url(../assets/img/thumbnails/WSL.svg);"
+					>
+					  <div class="inner">
+						<p><br></p>
+						<span><img width="120px" src="../assets/img/thumbnails/WSL.svg" width="120px"/></span>
+					  </div>
+					</div>
+					<div class="back">
+					  <div class="inner">
+						<p>
+						  <a href="/tutorials/Shell">Advanced Shell Scripting</a>
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="ccol" ontouchstart="this.classList.toggle('hover');">
+				  <div class="container1">
+					<div
+					  class="front"
+					  style="background-image: url('../assets/img/thumbnails/dgflow.png');"
+					>
+					  <div class="inner">
+						<p><br></p>
+						<span><img src="../assets/img/thumbnails/dgflow.png" width="110px"/></span>
+					  </div>
+					</div>
+					<div class="back">
+					  <div class="inner">
+						<p>
+							<a href="/tutorials/chatbots">Building your own chatbots</a>
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="ccol" ontouchstart="this.classList.toggle('hover');">
+				  <div class="container1">
+					<div
+					  class="front"
+					  style="background-image: url('../assets/img/thumbnails/ai.png')"
+					>
+					  <div class="inner">
+						<p><br></p>
+						<span><img src="../assets/img/thumbnails/ai.png" width="120px"/></span>
+					  </div>
+					</div>
+					<div class="back">
+					  <div class="inner">
+						<p>
+							<a href="/tutorials/Ai">Illustrating with Adobe Ai</a>
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="ccol" ontouchstart="this.classList.toggle('hover');">
+				  <div class="container1">
+					<div
+					  class="front"
+					  style="background-image: url('../assets/img/thumbnails/iw.png');"
+					>
+					  <div class="inner">
+						<p><br></p>
+						<span><img src="../assets/img/thumbnails/iw.png" width="120px"/></span>
+					  </div>
+					</div>
+					<div class="back">
+					  <div class="inner">
+						<p>
+							<a href="/tutorials/imagine">Imaginative writing </a>
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="ccol" ontouchstart="this.classList.toggle('hover');">
+				  <div class="container1">
+					<div
+					  class="front" style= "background-image: url('../assets/img/thumbnails/sw.png')"
+					>
+					  <div class="inner">
+						<p><br></p>
+						<span><img src="../assets/img/thumbnails/sw.png" width="120px"/></span>
+					  </div>
+					</div>
+					<div class="back">
+					  <div class="inner">
+						<p>
+							<a href="/tutorials/solidworks">Automobile design with SolidWorks </a>
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="ccol" ontouchstart="this.classList.toggle('hover');">
+				  <div class="container1">
+					<div
+					  class="front"
+					  style="background-image: url('../assets/img/thumbnails/hack.png');"
+					>
+					  <div class="inner">
+						<p><br></p>
+						<span><img src="../assets/img/thumbnails/hack.png" width="120px"></span>
+					  </div>
+					</div>
+					<div class="back">
+					  <div class="inner">
+						<p>
+							<a href="/tutorials/hacking">Essential hacking </a>
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </section>
+	</main>
+	<div
+	class="d-flex flex-column align-items-center"
+	id="foot"
+	style="
+	  margin-top: 50px;
+	  width: 100vw; /*position: absolute;*/
+	  bottom: 0px;
+	  margin-bottom: 0px;
+	"
+  >
+	<h5 class="text-center" style="font-family: 'Roboto Slab', serif;">
+	  Brought to you by
+	</h5>
+	<div
+	  class="text-center d-flex d-xl-flex justify-content-center align-content-center flex-wrap align-items-xl-center"
+	  style="
+		width: 50vw;
+		color: rgb(255, 255, 255);
+		background-color: #ffffff;
+		border-top-right-radius: 60px;
+		border-top-left-radius: 60px;
+		border-bottom-left-radius: 60px;
+		border-bottom-right-radius: 60px;
+		border-color: transparent;
+		margin-bottom: 0px;
+		max-width: 550px;
+	  "
+	>
+	  <img
+		class="img-fluid flex-grow-0 flex-shrink-1"
+		src="../assets/img/lit_club.png"
+		style="
+		  margin: 5px;
+		  width: 280px;
+		  margin-top: 0px;
+		  margin-bottom: 0px;
+		  padding-bottom: 10px;
+		"
+	  /><img
+		class="img-fluid flex-grow-0 flex-shrink-1"
+		src="../assets/img/dc_logo.png"
+		style="
+		  margin: 5px;
+		  width: 250px;
+		  margin-top: 0px;
+		  margin-bottom: 0px;
+		  padding-bottom: 10px;
+		"
+	  />
+	</div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.min.js"></script>
+</body>
+
+</html>

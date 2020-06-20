@@ -1,0 +1,488 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section style="margin-top: 10vh;">
+  <div class="text-center" style="color: rgb(58, 58, 58); font-family: 'Josefin Slab', serif;">
+    <strong><h2>Welcome to</h2></strong>
+    <img src="../assets/img/delit.png" width="340px"/>
+  </div>
+  <h2 class="text-center" style="font-family: 'Josefin Sans', sans-serif; margin: 20px auto; padding-top: 10px; padding-bottom: 10px; background-color: #2e8690; color: azure;"> - Speaker Profiles - </h2>
+  <div class="buttons">
+    <button class="pulse" onclick="window.open('https://www.canva.com/design/DAD_U8IFvFc/dyXeXhutD3LiBJU-FKweFg/view?website#2:overview','_blank')">Webinar</button>
+    <button class="pulse" onclick="window.open('https://www.canva.com/design/DAD_VqutBC0/duHBbqYcjzXscpNJ9xer4g/view?website#2:overview','_blank')">Commentary</button>
+    <button class="pulse" onclick="window.open('https://www.canva.com/design/DAD_g0qP7VE/_v23_2_dXGSPR2fjR4Suuw/view?website#2:overview','_blank')">&nbsp; Panel &nbsp;</button>
+  </div>
+    <h2 class="text-center" style="font-family: 'Josefin Sans', sans-serif; margin: 20px auto; padding-top: 10px; padding-bottom: 10px; background-color: #2e8690; color: azure;"> - Schedule - </h2>
+    <div class="row" style="font-family: 'Josefin Slab', serif;">  
+        <div class="col-sm-6 col-12">
+                <h3 style="margin-left: 20px; font-weight: 700;">June 20<hr/></h3>
+            <div class="timeline">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                      <!-- Timeline -->
+                      <ul class="timeline">
+                         {% for item in day1 %} 
+                        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+              
+                          <h2 class="h3 mb-0" style="font-weight: 700;">{{item.title}}<hr/></h2>
+                          <div class="table-responsive">
+                              {% for i in range(item.count) %}
+                              {% if item.count==1 %}
+                              <table class="table">
+                                <tbody>
+                                  <tr>
+                                    <td class="text-center border rounded-circle" colspan style="
+                                        width: 70px;
+                                        height: 70px;
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        vertical-align: middle;
+                                        padding: 0%;
+                                      " rowspan="2">
+                                      <div style="
+                                          width: 70px;
+                                          height: 70px;
+                                          background-color: #2e8690;
+                                          border-radius: 50px;
+                                          background-image: url(../assets/img/speakers/{{item.image}});
+                                          background-repeat: no-repeat;
+                                          background-size: contain;
+                                          background-position: center;
+                                        "></div>
+                                    </td>
+                                    <td rowspan="1" colspan="2" style="padding: 0px;">
+                                      <h4 style="
+                                          margin: 0px;
+                                          padding-top: 10px;
+                                          font-weight: bold;
+                                          margin-left: 10px;
+                                          color: #2e8690;
+                                        ">
+                                        {{item.speaker}}
+                                      </h4>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="1" style="padding: 0px; padding-left: 10px;">
+                                      <h5 style="font-family: 'Josefin Sans', sans-serif;">
+                                        <span style="color: rgb(115, 115, 115);">{{item.year}}</span>
+                                      </h5>
+                                      <h5 style="color: rgb(129, 123, 123);">
+                                          {{item.position}}
+                                      </h5>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              {% endif %}
+                              {% if item.count > 1 %}
+                            <table class="table">
+                              <tbody>
+                                <tr>
+                                  <td class="text-center border rounded-circle" colspan style="
+                                      width: 70px;
+                                      height: 70px;
+                                      background-size: contain;
+                                      background-repeat: no-repeat;
+                                      background-position: center;
+              
+                                      padding: 0%;
+                                    " rowspan="2">
+                                    <div style="
+                                        width: 70px;
+                                        height: 70px;
+                                        background-color: #2e8690;
+                                        border-radius: 50px;
+                                        background-image: url(../assets/img/speakers/{{item.image[i]}});
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                      "></div>
+                                  </td>
+                                  <td rowspan="1" colspan="2" style="padding: 0px;">
+                                    <h4 style="
+                                        margin: 0px;
+                                        padding-top: 10px;
+                                        font-weight: bold;
+                                        margin-left: 10px;
+                                        color: #2e8690;
+                                      ">
+                                      {{item.speaker[i]}}
+                                    </h4>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="1" style="padding: 0px; padding-left: 10px;">
+                                    <h5 style="font-family: 'Josefin Sans', sans-serif;">
+                                      <span style="color: rgb(115, 115, 115);">{{item.year[i]}}</span>
+                                    </h5>
+                                    <h5 style="color: rgb(129, 123, 123);">
+                                        {{item.position[i]}}
+                                    </h5>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            {% endif %}
+                            {% endfor %}
+                          </div>
+                          <span class="h5 text-gray"><i class="fa fa-clock-o mr-1"></i>{{item.time}}</span>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      <!-- End -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 col-12">
+            <h3 style="margin-left: 20px; font-weight: 700;">June 21<hr/></h3>
+            <div class="timeline">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                      <!-- Timeline -->
+                      <ul class="timeline">
+                         {% for item in day2 %} 
+                        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+              
+                          <h2 class="h3 mb-0" style="font-weight: 700;">{{item.title}}<hr/></h2>
+                          <div class="table-responsive">
+                              {% for i in range(item.count) %}
+                              {% if item.count==1 %}
+                              <table class="table">
+                                <tbody>
+                                  <tr>
+                                    <td class="text-center border rounded-circle" colspan style="
+                                        width: 70px;
+                                        height: 70px;
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        vertical-align: middle;
+                                        padding: 0%;
+                                      " rowspan="2">
+                                      <div style="
+                                          width: 70px;
+                                          height: 70px;
+                                          background-color: none;
+                                          border-radius: 50px;
+                                          background-image: url(../assets/img/speakers/{{item.image}});
+                                          background-repeat: no-repeat;
+                                          background-size: contain;
+                                          background-position: center;
+                                        "></div>
+                                    </td>
+                                    <td rowspan="1" colspan="2" style="padding: 0px;">
+                                      <h4 style="
+                                          margin: 0px;
+                                          padding-top: 10px;
+                                          font-weight: bold;
+                                          margin-left: 10px;
+                                          color: #2e8690;
+                                        ">
+                                        {{item.speaker}}
+                                      </h4>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="1" style="padding: 0px; padding-left: 10px;">
+                                      <h5 style="font-family: 'Josefin Sans', sans-serif;">
+                                        <span style="color: rgb(115, 115, 115);">{{item.year}}</span>
+                                      </h5>
+                                      <h5 style="color: rgb(129, 123, 123);">
+                                          {{item.position}}
+                                      </h5>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              {% endif %}
+                              {% if item.count > 1 %}
+                            <table class="table">
+                              <tbody>
+                                <tr>
+                                  <td class="text-center border rounded-circle" colspan style="
+                                      width: 70px;
+                                      height: 70px;
+                                      background-size: contain;
+                                      background-repeat: no-repeat;
+                                      background-position: center;
+              
+                                      padding: 0%;
+                                    " rowspan="2">
+                                    <div style="
+                                        width: 70px;
+                                        height: 70px;
+                                        background-color: #2e8690;
+                                        border-radius: 50px;
+                                        background-image: url(../assets/img/speakers/{{item.image[i]}});
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                      "></div>
+                                  </td>
+                                  <td rowspan="1" colspan="2" style="padding: 0px;">
+                                    <h4 style="
+                                        margin: 0px;
+                                        padding-top: 10px;
+                                        font-weight: bold;
+                                        margin-left: 10px;
+                                        color: #2e8690;
+                                      ">
+                                      {{item.speaker[i]}}
+                                    </h4>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="1" style="padding: 0px; padding-left: 10px;">
+                                    <h5 style="font-family: 'Josefin Sans', sans-serif;">
+                                      <span style="color: rgb(115, 115, 115);">{{item.year[i]}}</span>
+                                    </h5>
+                                    <h5 style="color: rgb(129, 123, 123);">
+                                        {{item.position[i]}}
+                                    </h5>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            {% endif %}
+                            {% endfor %}
+                          </div>
+                          <span class="h5 text-gray"><i class="fa fa-clock-o mr-1"></i>{{item.time}}</span>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      <div style="background: url(../assets/img/bg.jpg); height: 1000px; background-size: cover;"> 
+
+                      </div>
+                      <!-- End -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center" style="font-family: 'Josefin Sans', sans-serif; margin: 20px auto; padding-top: 10px; padding-bottom: 10px; background-color: #2e8690; color: azure;"> - The Committee - </h2>
+    <div id="table-cont" style="overflow: auto;font-family: 'Josefin Slab', serif; font-size: x-large;" class="text-center">
+        <table class="table table-hover table-bordered text-center " style=" min-width: 320px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+          <thead>
+            <tr>
+              <th scope="col">Committee</th>
+              <th scope="col">Faculty coordinator</th>
+              <th scope="col">Student coordinator</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Overall</td>
+              <td>-</td>
+              <td>
+                Rupam Chirom <br />
+                Najmu Sehar Wani
+              </td>
+            </tr>
+            <tr>
+              <td>Literary Events</td>
+              <td>
+                Dr. V. Akila, Asst. Prof., CSE <br />
+                Dr. N. Rathinam, Asst. Prof., ME
+              </td>
+              <td>
+                Srimathy S. <br />
+                Karthic B.
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Alternate Climax</td>
+              <td>-</td>
+              <td>
+                Karthic B. <br />
+                Arun T. <br />
+                Madhumita R.
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Open Discussion Forum</td>
+              <td></td>
+              <td>
+                Soundarya S. <br />
+                Mounik Narsimha
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Poetry</td>
+              <td>-</td>
+              <td>
+                Monisha B <br />
+                Ayesha Begum A.&nbsp;R.
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Case Study</td>
+              <td>-</td>
+              <td>
+                Sandeep Kumar <br />
+                Padmasri R. <br />
+                Mutyala Sri Ramya
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Story telling</td>
+              <td>-</td>
+              <td>
+                Kamala Srinidhi V <br />
+                Puneeth V.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Webinar,<br />
+                Panel Discussion,<br />
+                Commentary
+              </td>
+              <td>
+                Dr. K. Sathiyamurthy, Assoc. Prof., CSE <br />
+                Dr. A. V. Ananthalakshmi, Asst. Prof., ECE <br />
+                Dr. S. Rajendiran,Asst. Prof., EIE <br />
+                Dr. M.S. Anbarasi, Asst. Prof., IT
+              </td>
+              <td>
+                Soundarya S. <br />
+                Najmu Sehar Wani <br />
+                Rahul Perri <br />
+                Padmasri
+              </td>
+            </tr>
+            <tr>
+              <td>Tutorials</td>
+              <td>-</td>
+              <td>
+                Overall - Rupam Chirom
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Prototype with Adobe XD</td>
+              <td>Dr. K. Sathiyamurthy, Assoc. Prof., CSE</td>
+              <td>
+                Rupam Chirom
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Advance Shell Scripting</td>
+              <td>Dr. V. Akila, Asst. Prof., CSE</td>
+              <td>
+                Ayush Singh
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Build your own Chatbot</td>
+              <td>Dr. S. Rajendiran,Asst. Prof., EIE</td>
+              <td>
+                Bavani T.
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Illustrating with Adobe Ai</td>
+              <td>Dr. A. V. Ananthalakshmi, Asst. Prof., ECE</td>
+              <td>
+                Najmu Sehar Wani
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Essential Photoshop</td>
+              <td>Dr. K. Sathiyamurthy, Assoc. Prof., CSE</td>
+              <td>
+                RamVignesh B.
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Imaginative writing</td>
+              <td>Dr. Shanthi Simon, HOD, HSS; Convenor.</td>
+              <td>
+                Yasmin J.
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Automobile design with SolidWorks</td>
+              <td>Dr. N. Rathinam, Asst. Prof., ME</td>
+              <td>
+                Praveen Doss <br />
+                Yogeshwaran
+              </td>
+            </tr>
+            <tr class="grey">
+              <td>Essential hacking</td>
+              <td>Dr. M.S. Anbarasi, Asst. Prof., IT</td>
+              <td>
+                Adharsh M <br />
+                Kadhirvel@Lokeshwaran K
+              </td>
+            </tr>
+            <tr>
+              <td>Quiz</td>
+              <td>-</td>
+              <td>
+                Manish T. <br />
+                Nandhini
+              </td>
+            </tr>
+            <tr>
+              <td>Games</td>
+              <td>-</td>
+              <td>
+                Rahul Perri <br />
+                Yagneshwari R. <br />
+                Srikar Vidya Sagar <br />
+                Krishnapriya K.
+              </td>
+            </tr>
+            <tr>
+              <td>Technical</td>
+              <td>-</td>
+              <td>
+                RamVignesh B. <br />
+                Purushottam Banerjee <br />
+                Hari Kishore
+              </td>
+            </tr>
+            <tr>
+              <td>Streaming</td>
+              <td>-</td>
+              <td>
+                Manish T. <br />
+                Sai Teja P.
+              </td>
+            </tr>
+            <tr>
+              <td>Certificates</td>
+              <td>-</td>
+              <td>
+                R. Hemaachandar
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 style="text-align: center;">Contact numbers</h3>
+      <table class="table table-bordered" style="margin-right: auto; margin-left: auto; min-width: 320px; max-width: 1000px; text-align: center;">
+        <tr>
+          <td>Rupam Chirom</td>
+          <td>9402703720</td>
+        </tr>
+        <tr>
+          <td>Najmu Sehar Wani</td>
+          <td>9906417236</td>
+        </tr>
+      </table>
+      </div>
+      
+    </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html' %} {% block content %}
+<section style="width: 100vw; padding: 0px; margin-top: 10vh;">
+  <div class="marquee" style="background-color: rgba(194, 194, 194, 0.658);">
+    <p style="font-family: 'Josefin Slab', sans-serif; font-size: 1.5em;">Now premiering: <span id="show" style="font-weight: 700;"></span></p>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col col-sm-8 col-12"
+        style="padding-top: 5px; padding-bottom: 5px;"
+      >
+        <div class="video-container">
+          <iframe
+            class="flex-fill"
+            allowfullscreen=""
+            frameborder="0"
+            src="https://www.youtube.com/embed/tsR7Vz4XxlI"
+            width="853"
+            height="480"
+          ></iframe>
+        </div>
+      </div>
+      <div
+        class="col col-sm-4 col-12"
+        style="padding: 5px auto; padding-top: 5px; padding-bottom: 5px;"
+      >
+        <div
+          class="video-container"
+          style="
+            /*border: 4px dashed #111;*/
+            width: 100%;
+            height: 100%;
+            opacity: 0.85;
+            filter: blur(0px);
+          "
+        >
+          <iframe
+            src="https://titanembeds.com/embed/718783229750149202?css=124"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="text-center">
+    <a href="/logout">Logout</a>
+  </div>
+</footer>
+<script>
+  function myFunction() {
+    let time = new Date();
+    let hour = time.getUTCHours();
+    let minutes = time.getUTCMinutes();
+    let now = hour * 60 + minutes;
+    console.log(now);
+    let playing = '';
+    if (now < 255) {
+        playing = 'Welcoming Address'
+    }
+    else if (now < 285) {
+        playing = 'Opening Keynote'
+    }
+    else if (now < 295) {
+        playing = 'Felicitation'
+    }
+    else if (now < 360) {
+        playing = 'Webinar - Distanced: A new trend for work'
+    }
+    else if (now < 420) {
+        playing = 'Commentary - Careers of future'
+    }
+    else if (now < 510) {
+        playing = 'Webinar - Specialist Generalist Complex'
+    }
+    else if (now < 600) {
+      playing = 'Commentary - Engineers in making (Degrees or Skill-set/Self-learning or Mentor-ship)'
+    }
+    else if (now < 690) {
+      playing = 'Webinar - Careers beyond Engineering: Manufacturing success brick by brick'
+    }
+    document.querySelector("#show").innerHTML = playing;
+  }
+  myFunction();
+  var interval = setInterval(function () {
+    myFunction();
+  }, 60000);
+</script>
+{% endblock %}

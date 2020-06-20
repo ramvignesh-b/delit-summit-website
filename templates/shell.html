@@ -1,0 +1,3467 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>#DeLit Tutorials WSL</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Josefin+Sans:wght@500&family=Pattaya&family=Roboto+Slab&display=swap');
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Jacques Francois Shadow";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Josefin Sans";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Roboto Slab";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:NimbusRomNo9L-Medi;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:BitstreamVeraSans-Roman;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:OpenSymbol;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Roboto Slab";}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:18.0pt;
+	font-family:"Josefin Sans";
+	font-weight:bold;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Comment Text Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Roboto Slab";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:11.0pt;
+	font-family:"Roboto Slab";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:11.0pt;
+	font-family:"Roboto Slab";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Comment Subject Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Roboto Slab";
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"Segoe UI",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Roboto Slab";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Roboto Slab";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Roboto Slab";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Roboto Slab";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Josefin Sans";
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+span.ezoic-ad
+	{mso-style-name:ezoic-ad;}
+span.nb
+	{mso-style-name:nb;}
+span.nv
+	{mso-style-name:nv;}
+span.o
+	{mso-style-name:o;}
+span.s2
+	{mso-style-name:s2;}
+span.c1
+	{mso-style-name:c1;}
+span.k
+	{mso-style-name:k;}
+span.si
+	{mso-style-name:si;}
+span.p
+	{mso-style-name:p;}
+span.code-copy
+	{mso-style-name:code-copy;}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-link:"Comment Text";}
+span.CommentSubjectChar
+	{mso-style-name:"Comment Subject Char";
+	mso-style-link:"Comment Subject";
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Segoe UI",sans-serif;}
+p.quesmarg, li.quesmarg, div.quesmarg
+	{mso-style-name:ques_marg;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" style="max-width:700px; text-align:center; margin: 10px auto">
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid windowtext 1.5pt;padding:0cm 0cm 1.0pt 0cm'>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span style='font-size:48.0pt;
+line-height:107%;font-family:"Jacques Francois Shadow"'>#DeLit-Day</span></p>
+
+</div>
+
+<p class=MsoNormal><span style='font-size:36.0pt;line-height:107%;font-family:
+"Josefin Sans";color:red'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:28.0pt;line-height:107%;font-family:
+"Josefin Sans";color:red'>Windows Subsystem for Linux and Bash Scripting</span></p>
+
+<div style='border:none;border-bottom:solid windowtext 1.5pt;padding:0cm 0cm 1.0pt 0cm'>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>#DeLit-day Tutorials,
+essential skills for everyone</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Josefin Sans"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:18.0pt;line-height:
+107%;font-family:"Segoe UI",sans-serif'>Modules</span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-1-_Windows_Subsystem"><b><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'></span></b><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>1-&gt;
+Windows Subsystem for Linux (WSL)</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-1.1-_About_WSL?"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>About
+WSL</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-1.2-_Why_WSL?"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>Why
+WSL?</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-1.3-_WSL-1_vs"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>WSL-1
+vs WSL-2</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-1.4-_Getting_Started"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>Getting
+started</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-1.5-_WSL_basics"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>WSL
+basics update, upgrade installations</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-1.6-_Mini_Project:"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>Project(mini):
+Express Hello World web app</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-2-_Scripting"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>2-&gt;
+Scripting</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-2.1-_About_Scripting"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>About
+Scripting</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-2.2-_Types_of"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>Types
+of Scripting</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-2.3-_Basic_Shell"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>Basic
+Shell Scripting (SSH)</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-2.4-_QUIZ"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>Quiz</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-3-_BONUS"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>3-&gt;
+BONUS</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-3.1-_Vim"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>Vim</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><a href="#_-3.2-_ADD-ONS"><span
+style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>ADD-ONS</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>____________________________________________________________</span></p>
+
+<div style='border:none;border-bottom:solid windowtext 1.5pt;padding:0cm 0cm 1.0pt 0cm'>
+
+<h2 style='border:none;padding:0cm'><a name="_-1-_Windows_Subsystem"></a><span
+lang=EN-IN>-1</span><span lang=EN-IN style='font-size:22.0pt'>- Windows
+Subsystem for Linux (WSL)</span></h2>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:24.0pt;line-height:107%;
+font-family:"Josefin Sans"'>&nbsp;</span></p>
+
+<h2><a name="_-1.1-_About_WSL?"></a><span lang=EN-IN>-1.1- About WSL?</span></h2>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:12.9pt'>
+  <td width=160 valign=top style='width:120.25pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.9pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><b><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>Developers</span></b></p>
+  </td>
+  <td width=356 valign=top style='width:266.95pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.9pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>Microsoft <span
+  style='color:black;background:white'>Corporation</span></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.9pt'>
+  <td width=160 valign=top style='width:120.25pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.9pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><b><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>Platform</span></b></p>
+  </td>
+  <td width=356 valign=top style='width:266.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.9pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>Windows</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.9pt'>
+  <td width=160 valign=top style='width:120.25pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.9pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><b><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>Released
+  OS</span></b></p>
+  </td>
+  <td width=356 valign=top style='width:266.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.9pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>Windows
+  8.1</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.9pt'>
+  <td width=160 valign=top style='width:120.25pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.9pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><b><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>Current
+  Version</span></b></p>
+  </td>
+  <td width=356 valign=top style='width:266.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.9pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>WSL 2</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.65pt'>
+  <td width=160 valign=top style='width:120.25pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:15.65pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><b><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>Uses</span></b></p>
+  </td>
+  <td width=356 valign=top style='width:266.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.65pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-IN style='font-family:"Segoe UI",sans-serif'>Linux
+  alongside Windows, Bash scripting, System Administration, Run web apps</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'> </span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Windows
+Subsystem for Linux is a new feature offered by Windows and was released from
+Windows version 8.1, WSL received its official stable release from Windows 10. </span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>WSL
+provides a Linux compatible kernel interface which is developed by Microsoft.
+It provides Linux kernel which allow user to run the GNU user space such as
+Ubuntu. It enables alongside bash scripting with Linux kernel and Windows GUI
+rather than Windows NT kernel.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:gray'>WSL provides users to select the GNU, utilities, command-line tools
+and application on Windows.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:gray'>Q1: What are the features of WSL</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:34.2pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><u><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>Alongside Linux
+Kernel</span></u></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:34.2pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><u><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>System Admin</span></u></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:34.2pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>Linux GUI</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:34.2pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><u><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>Multiple
+command-line tools and utilities</span></u></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>&nbsp;</span></p>
+
+<h2><a name="_-1.2-_Why_WSL?"></a><span lang=EN-IN>-1.2- Why WSL?</span></h2>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Okay
+so when it comes to a kernel installation alongside windows most users are aware
+about the Virtual Box (VB). Virtual Box is an application use to run Ubuntu,
+Parrot OS, Linux and many other OS alongside Windows, a stable GNU for most of
+the users.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Where
+does the VB fails?</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Well
+a Virtual Box enables the user to access the content of user PC along side
+window but wont allow the user to perform GUI windows and Kernel Linux
+operations. Virtual Box will take a small storage of your PC and install a new
+OS which you can operate while using Windows as main OS and VM with Ubuntu,
+Kali Linux, Parrot OS, Sun sys etc as a substitute OS.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>GUI
+and Kernel of the same OS for VB</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>WSL
+is completely opposite to VM, here the user uses <span style='color:gray'>Windows
+GUI while Linux Kernel in a stable form</span>. Isnt it amazing Windows GUI +
+Linux terminal/Kernel with a faster performance without even giving a complete
+installation to GUI of other OS. You can install any command-line tool, system
+utilities and Kernel based applications that are to be performed.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:gray'>Q2: Is WSL better than Virtual Box?</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:37.8pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><u><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>True</span></u></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:37.8pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>False</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>&nbsp;</span></p>
+
+<h2><a name="_-1.3-_WSL-1_vs"></a><span lang=EN-IN>-1.3- WSL-1 vs WSL-2</span></h2>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:#333333;background:white'>WSL 2 is a new version of the architecture that
+powers the Windows Subsystem for Linux to run ELF64 Linux binaries on Windows.
+Its primary goals are to increase file system performance, as well as adding
+full system call compatibility. This new architecture changes how these Linux
+binaries interact with Windows and your computers hardware, but still provides
+the same user experience as in WSL 1 (the current widely available version).
+Individual Linux distros can be run either as a WSL 1 distro, or as a WSL 2
+distro, can be upgraded or downgraded at any time, and you can run WSL 1 and
+WSL 2 distros side by side. WSL 2 uses an entirely new architecture that uses a
+real Linux kernel. Its a major reworking of the original WSL concept, moving
+away from translating Linux system calls to Windows to shipping a complete
+Linux kernel that runs alongside Windows own kernel.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:#333333;background:white'>WSL system performance is 20x faster as
+compared to WSL 1. </span><span lang=EN-IN style='font-size:16.0pt;line-height:
+107%;color:gray;background:white'>Initial versions of WSL 2 run up to 20x
+faster compared to WSL 1</span><span lang=EN-IN style='font-size:16.0pt;
+line-height:107%;color:#333333;background:white'> when unpacking a zipped
+tarball, and around 2-5x faster when using git clone, npm install and cmake on
+various projects.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:#333333;background:white'>&nbsp;</span></p>
+
+<h2><a name="_-1.4-_Getting_Started"></a><span lang=EN-IN style='color:black;
+background:white'>-1.4- Getting Started</span></h2>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:18.0pt;line-height:
+107%;color:#333333;background:white'>Part 1</span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:#333333;background:white'> Enabling</span><span lang=EN-IN
+style='font-size:18.0pt;line-height:107%;color:gray;background:white'>
+Developer Mode </span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Something new for most of the users that Windows
+allow Developers Mode, enough of it lets get started:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So here we go for our first step toward WSL
+installation and enabling Developer mode, head over to start and search for
+Settings</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=535 height=397
+id="Picture 1" src="%23dday-wsl+bash_files/image001.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Press enter and proceed to the next step. In the
+Settings you will get an option Update and Security head over to it</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=494 height=398
+id="Picture 2" src="%23dday-wsl+bash_files/image002.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Here Update and Security panel the user can check
+for recent updates and can enable disable the developer mode, on the left side
+of screen search for an option For developers and select it. In it now you
+have 3 modes select Developer Mode and Windows will turn developer mode as
+default system mode</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=493 height=402
+id="Picture 3" src="%23dday-wsl+bash_files/image003.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>A warning will be triggered select yes and
+proceed</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=493 height=398
+id="Picture 4" src="%23dday-wsl+bash_files/image004.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Short Path: </span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:14.0pt;line-height:107%;
+color:gray;background:white'>search -&gt; Settings -&gt; Update &amp; Security
+-&gt; For Developers (left side)-&gt; Developer Mode -&gt; yes</span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:18.0pt;line-height:
+107%;color:black;background:white'>Part 2</span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:gray;background:white'> Enable WSL</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So here we go again enabling WSL mode under
+Developer mode, lets get started with it</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Head over to search and search for Control
+Panel</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=505 height=93
+id="Picture 5" src="%23dday-wsl+bash_files/image005.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Inside Control Panel head over to Programs </span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=318
+id="Picture 7" src="%23dday-wsl+bash_files/image006.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Select Turn windows features on or off</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=317
+id="Picture 6" src="%23dday-wsl+bash_files/image007.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Windows feature menu will pop up just scroll down
+and select for Windows Subsystem for Linux and click ok</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=447 height=392
+id="Picture 8" src="%23dday-wsl+bash_files/image008.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Let Windows feature perform its task and enable
+WSL for your Windows. A new screen of Windows feature will pop up and you have
+to restart your system after enabling WSL, select restart now and wait for
+your system to restart.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=497
+id="Picture 9" src="%23dday-wsl+bash_files/image009.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> *Congrats! WSL has been enabled in your
+system*</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Short Path: </span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:14.0pt;line-height:107%;
+color:gray;background:white'>search -&gt; Control Panel -&gt; Programs -&gt;
+Turn Windows features on or off -&gt; Windows Subsystem for Linux (scroll down
+to the end) -&gt; Ok -&gt; Restart now</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:14.0pt;line-height:107%;
+color:gray;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:18.0pt;line-height:
+107%;color:black;background:white'>Part 3</span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:gray;background:white'> Subsystem Installation</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So, we are back again here to start over
+subsystem installation, now your Windows enabled a new application in your PC </span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;color:gray;background:white'>bash</span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;color:black;background:
+white'></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=463 height=82
+id="Picture 10" src="%23dday-wsl+bash_files/image010.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>The only problem right now with Bash is that we
+havent installed any subsystem for bash to run, so lets get started with
+subsystem installation:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So, head over to your Microsoft store and search
+for Ubuntu</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=467
+id="Picture 11" src="%23dday-wsl+bash_files/image011.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Click on Get and wait till Ubuntu is downloaded
+and launch the application</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=466
+id="Picture 12" src="%23dday-wsl+bash_files/image012.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Click on launch and launch the application The
+installation process for windows will take a few minutes and after that you are
+all set to set your UNIX username and password. Heres the welcome screen:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=350
+id="Picture 13" src="%23dday-wsl+bash_files/image013.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> *So here we end up with the installation
+part*</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray;background:white'>Q3: You can only
+install Ubuntu using WSL</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:40.2pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray;background:white'>True</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:40.2pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray;background:white'>False</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:26.0pt;line-height:107%;
+font-family:"Josefin Sans";color:gray;background:white'>&nbsp;</span></p>
+
+<h2><a name="_-1.5-_WSL_basics"></a><span lang=EN-IN style='color:black;
+background:white'>-1.5- WSL basics</span></h2>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So here we will start with the basic commands
+that you can use in WSL for example here Ill switch my directory from windows
+to Linux in the image demonstrated below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=350
+id="Picture 14" src="%23dday-wsl+bash_files/image014.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Update your packages by running the given command
+below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ sudo apt update</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Once when you are done with the update run the upgrade
+command, this may take a while:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ sudo apt upgrade</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Lets head over to htop installation which is
+Linux task manager, run the command given below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ sudo apt install htop</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Successful installation of htop will let you
+access the task manager, head over to the next command for setting a localhost:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> # ssh localhost</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Okay so here we are done with all set of Kernel
+installations.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'><img
+border=0 width=632 height=408 src="%23dday-wsl+bash_files/image015.png"
+alt="Note:&#13;&#10;You can access Linux Kernel using cmd as well as Windows Powershell just type the given command:&#13;&#10;    bash //to log into your system&#13;&#10;    exit //to logout of the system&#13;&#10;Window + ctrl + d : use this command to enable a new desktop and work on Windows and ubuntu simultaneously&#13;&#10;// the slide feature may work only for new laptops with gesture detector at their mousepad!!&#13;&#10;&#13;&#10;"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So, isnt it interesting operating two OS at the
+same time.</span></p>
+
+<h2><span lang=EN-IN style='background:white'>&nbsp;</span></h2>
+
+<h2><a name="_-1.6-_Mini_Project:"></a><span lang=EN-IN style='font-size:26.0pt;
+color:black;background:white'>-1.6- Mini Project: Express Web App</span></h2>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So welcome to your first mini project where you
+will be holding a localhost of your Express Web App, this is a mini project
+helping you out in holding the server connections.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>To start of with the project, we have to start
+with few installations and you need an active internet connection for this. The
+web app application in the tutorial uses cmd as IDE, Ill be accessing Linux
+Kernel using cmd but I have listed few of the best IDE you can use for it, here
+are few names listed below:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:27.0pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>VS code</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:27.0pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>CMD</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:27.0pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Windows PowerShell</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:27.0pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Hyper (best IDE for Bash)</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:27.0pt;text-indent:-18.0pt'><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Ubuntu WSL</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>The reason for WSL installation was to let your Virtual
+Machine access bash for SSH, so lets get started now:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> </span><span lang=EN-IN style='font-size:
+18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;color:gray;
+background:white'>install node.js and npm</span><span lang=EN-IN
+style='font-size:18.0pt;line-height:107%;color:black;background:white'></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So, head over to your IDE and type bash if you
+are using VS code, CMD, Windows PowerShell or Hyper as your IDE. Run the
+command given below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ sudo apt-get install nodejs npm</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>You can verify your node JS and npm version by
+running the following commands</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ node version</span></p>
+
+<p class=MsoNormal><span style='position:absolute;z-index:251660288;left:0px;
+margin-left:-13px;margin-top:3657px;width:748px;height:272px'><img width=598
+height=218 src="%23dday-wsl+bash_files/image016.png"
+alt="Note:&#13;&#10;CMD is used as an IDE in the image below and after running the command it will take a long time for installation!!&#13;&#10;"></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;color:black;background:
+white'> $ npm --version</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=352
+id="Picture 18" src="%23dday-wsl+bash_files/image017.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Verify the installations by running the command
+mentioned above.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> </span><span lang=EN-IN style='font-size:
+18.0pt;line-height:107%;color:gray;background:white'>install Express Generator</span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;color:black;background:
+white'></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So, heading toward the next part of the
+installation with installing Express Generator.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:#A6A6A6;background:white'>What is
+Express Generator?</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:#A6A6A6;background:white'> Express is
+a popular JS framework used and run with Node JS</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>To install Express in your Virtual Machine run
+the command mentioned below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ sudo npm install -g express-generator</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:red;background:white'>CAUTION:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:red;background:white'>DO NOT TRY TO RUN THIS COMMAND WITH NPM
+INSTALLATION!!</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=348
+id="Picture 19" src="%23dday-wsl+bash_files/image018.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>So here we are done with our all installation
+parts.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Starting off, Express requires a scaffold to
+create the application so we will be starting with the Express app generation.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>To start off with creating a scaffold run the
+given command:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ express &lt;your_app_name&gt; --view pug</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ cd your_app_name</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ npm install</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Eg: # express designApp view pug</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> # cd designApp </span><span lang=EN-IN
+style='font-size:18.0pt;line-height:107%;color:#A6A6A6;background:white'>//changes
+directory to app </span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> # npm install </span><span lang=EN-IN
+style='font-size:18.0pt;line-height:107%;color:#A6A6A6;background:white'>//install
+the application</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Heres the web application installed example:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=338
+id="Picture 20" src="%23dday-wsl+bash_files/image019.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Run your application once the installation is
+complete with the command mentioned below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> $ npm start</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=347
+id="Picture 21" src="%23dday-wsl+bash_files/image020.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Wait for a few minutes and your app will be
+started in your browser.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Head over to your browser and type</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'> localhost:3000</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+color:black;background:white'>Congrats your first web app has been created,
+show your creativity and get started.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=396
+id="Picture 22" src="%23dday-wsl+bash_files/image021.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>____________________________________________________________</span></p>
+
+<div style='border:none;border-bottom:solid windowtext 1.5pt;padding:0cm 0cm 1.0pt 0cm'>
+
+<h2 style='border:none;padding:0cm'><a name="_-2-_Scripting"></a><span
+lang=EN-IN style='font-size:24.0pt'>-2- Scripting</span></h2>
+
+</div>
+
+<h2><span lang=EN-IN style='background:white'>&nbsp;</span></h2>
+
+<h2><a name="_-2.1-_About_Scripting"></a><span lang=EN-IN style='font-size:
+20.0pt;color:black;background:white'>-2.1- About Scripting</span></h2>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>The scripting language is basically a language
+where instructions are written for a run time environment. They do not require
+the compilation step and are rather interpreted. It brings new functions to
+applications and glue complex system together. A scripting language is a
+programming language designed for integrating and communicating with other
+programming languages.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline'><b><span lang=EN-IN
+style='font-size:16.0pt;color:black'>Advantages of scripting languages:</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;vertical-align:baseline'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-IN style='font-size:16.0pt;color:black'>Easy
+learning:</span></b><span lang=EN-IN style='font-size:16.0pt;color:black'>&nbsp;The
+user can learn to code in scripting languages quickly, not much knowledge of
+web technology is required.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;vertical-align:baseline'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-IN style='font-size:16.0pt;color:black'>Fast
+editing:</span></b><span lang=EN-IN style='font-size:16.0pt;color:black'>&nbsp;It
+is highly efficient with the limited number of data structures and variables to
+use.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;vertical-align:baseline'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-IN style='font-size:16.0pt;color:black'>Interactivity:</span></b><span
+lang=EN-IN style='font-size:16.0pt;color:black'>&nbsp;It helps in adding
+visualization interfaces and combinations in web pages. Modern web pages demand
+the use of scripting languages. To create enhanced web pages, fascinated visual
+description which includes background and foreground colours and so on.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;vertical-align:baseline'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-IN style='font-size:16.0pt;color:black'>Functionality:</span></b><span
+lang=EN-IN style='font-size:16.0pt;color:black'>&nbsp;There are different
+libraries which are part of different scripting languages. They help in
+creating new applications in web browsers and are different from normal
+programming languages.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline'><b><span lang=EN-IN
+style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline'><b><span lang=EN-IN
+style='font-size:16.0pt;color:black'>Application of Scripting Languages:</span></b><span
+lang=EN-IN style='font-size:16.0pt;color:black'>&nbsp;Scripting languages are
+used in many areas:</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;vertical-align:baseline'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;color:black'>Scripting
+languages are used in web applications. It is used in server side as well as
+client side. Server-side scripting languages are: JavaScript, PHP, Perl etc.
+and client-side scripting languages are: JavaScript, AJAX, jQuery etc.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;vertical-align:baseline'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;color:black'>Scripting
+languages are used in system administration. For example: Shell, Perl, Python
+scripts etc.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;vertical-align:baseline'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;color:black'>It is used
+in Games application and Multimedia.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;vertical-align:baseline'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;color:black'>It is used
+to create plugins and extensions for existing applications.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+background:white;vertical-align:baseline'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;color:black'>Server
+control panel and administration for developer.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline'><span lang=EN-IN
+style='font-size:16.0pt'>&nbsp;</span></p>
+
+<h2><span lang=EN-IN>&nbsp;</span></h2>
+
+<h2><a name="_-2.2-_Types_of"></a><span lang=EN-IN>-2.2- Types of Scripting</span></h2>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline'><span lang=EN-IN
+style='font-size:16.0pt;color:black'>Well for scripting there are many
+languages like bash, Python, Ruby, JavaScript etc but here in this course we
+will focus on shell scripting in Linux and different types of scripting in
+Linux, enough of the theory lets dig in to different types of Shell Scripting
+in Linux:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline'><span lang=EN-IN
+style='font-size:16.0pt'>&nbsp;</span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>Serial
+  No.</span></p>
+  </td>
+  <td width=180 valign=top style='width:134.7pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>Shell
+  Type</span></p>
+  </td>
+  <td width=308 valign=top style='width:231.3pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>Description</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>1</span></p>
+  </td>
+  <td width=180 valign=top style='width:134.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>Bash</span></p>
+  </td>
+  <td width=308 valign=top style='width:231.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt;
+  font-family:"Segoe UI",sans-serif;color:gray;background:white'>&nbsp;This is
+  the most common shell available on all Linux and Debian based systems. It is
+  open source and freeware.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>2</span></p>
+  </td>
+  <td width=180 valign=top style='width:134.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>C
+  Shell</span></p>
+  </td>
+  <td width=308 valign=top style='width:231.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  200%'><span lang=EN-IN style='font-size:16.0pt;line-height:200%;font-family:
+  "Segoe UI",sans-serif;color:gray'>This Shell scripting uses the C programming
+  shell syntax</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>3</span></p>
+  </td>
+  <td width=180 valign=top style='width:134.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>Korn
+  Shell</span></p>
+  </td>
+  <td width=308 valign=top style='width:231.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  200%'><span lang=EN-IN style='font-size:16.0pt;line-height:200%;font-family:
+  "Segoe UI",sans-serif;color:gray'>Korn is a Unix based Shell scripting</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  200%'><span lang=EN-IN style='font-size:16.0pt;line-height:200%;font-family:
+  "Segoe UI",sans-serif;color:gray'>program, initially based on the Bash Shell
+  Scripting. This shell is quite advanced and its a high-level programming
+  language.</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>4</span></p>
+  </td>
+  <td width=180 valign=top style='width:134.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt'>TCSH</span></p>
+  </td>
+  <td width=308 valign=top style='width:231.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;vertical-align:baseline'><span lang=EN-IN style='font-size:16.0pt;
+  font-family:"Segoe UI",sans-serif;color:gray;background:white'>There is no
+  specific full form of TCSH. It is as it is. TCSH is an advanced version of
+  Berkeley Unix C shell. It again supports C style syntax</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline'><span lang=EN-IN
+style='font-size:16.0pt'>&nbsp;</span></p>
+
+<h2><span lang=EN-IN>&nbsp;</span></h2>
+
+<h2><a name="_-2.3-_Basic_Shell"></a><span lang=EN-IN style='font-size:26.0pt;
+color:black;background:white'>-2.3- Basic Shell Scripting</span></h2>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>Okay so here in this module we will be discussing
+Basic Shell Scripting using bash and SSH, here below are few basic shell
+scripting commands with their functions:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'><img
+border=0 width=614 height=166 src="%23dday-wsl+bash_files/image022.png"
+alt="NOTE:&#13;&#10;Remember all these basic commands for shell scripting they vary from printing a statement in bash to creating and changing bash type of file/directory in bash!!&#13;&#10;"></span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:16.0pt;line-height:
+107%'> Unix/Linux Command Reference</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:16.0pt;line-height:
+107%;color:black;background:white'>File Commands:</span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>ls -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Directory
+listing</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:black;background:white'></span><span lang=EN-IN style='font-size:16.0pt'>ls
+-al -&gt; <span style='color:gray'>Formatted listing with hidden files</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt'>ls -lt -&gt; <span
+style='color:gray'>Sorting the Formatted listing by time modification</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt'>cd dir -&gt; <span
+style='color:gray'>Change directory to dir</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt'>cd -&gt; <span
+style='color:gray'>Change to home directory</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt'>pwd
+-&gt; <span style='color:gray'>Show current working directory</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt'>mkdir
+dir -&gt; <span style='color:gray'>Creating a directory dir</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt'>cat &gt;file
+-&gt; <span style='color:gray'>Places the standard input into the file</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt'>more file -&gt; <span
+style='color:gray'>Output the contents of the file</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt'>head file -&gt; <span
+style='color:gray'>Output the first 10 lines of the file</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt'>tail file -&gt; <span
+style='color:gray'>Output the last 10 lines of the file</span></span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+text-align:center;line-height:normal;text-autospace:none'><span lang=EN-IN
+style='font-size:16.0pt'>tail -f file -&gt; <span style='color:gray'>Output the
+contents of file as it grows, starting with the last
+10 lines</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt'>touch file -&gt; <span
+style='color:gray'>Create or update file</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt'>rm file -&gt; <span
+style='color:gray'>Deleting the file</span></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:gray'></span><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>rm
+-r dir -&gt; <span style='color:gray'>Deleting the directory</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt'>rm -f
+file </span><span lang=EN-IN style='font-size:16.0pt'>-&gt;</span><span
+lang=EN-IN style='font-size:16.0pt'> <span style='color:gray'>Force to remove
+the file</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt'>rm -rf
+dir </span><span lang=EN-IN style='font-size:16.0pt'>-&gt; </span><span
+lang=EN-IN style='font-size:16.0pt;color:gray'>Force to remove the directory
+dir</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt'>cp file1
+file2 </span><span lang=EN-IN style='font-size:16.0pt'>-&gt;</span><span
+lang=EN-IN style='font-size:16.0pt'> <span style='color:gray'>Copy the contents
+of file1 to file2</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:16.0pt'>cp -r
+dir1 dir2 </span><span lang=EN-IN style='font-size:16.0pt'>-&gt; </span><span
+lang=EN-IN style='font-size:16.0pt;color:gray'>Copy dir1 to dir2; create dir2
+if not present</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+text-align:center;line-height:normal;text-autospace:none'><span lang=EN-IN
+style='font-size:16.0pt'>mv file1 file2 </span><span lang=EN-IN
+style='font-size:16.0pt'>-&gt; </span><span lang=EN-IN style='font-size:16.0pt;
+color:gray'>Rename or move file1 to file2, if file2 is an existing directory</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>ln
+-s file </span><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>-&gt;
+</span><span lang=EN-IN style='font-size:16.0pt;line-height:107%;color:gray'>link
+Create symbolic link to file</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 24" src="%23dday-wsl+bash_files/image023.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:16.0pt;line-height:
+107%'>File Permission:</span></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=301 valign=top style='width:225.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span lang=EN-IN style='font-size:12.0pt'>chmod
+  octal file</span></p>
+  </td>
+  <td width=301 valign=top style='width:225.4pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span lang=EN-IN style='font-size:12.0pt'>Change
+  the permission of file to octal, which can</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span lang=EN-IN style='font-size:12.0pt'>be
+  found separately for user,group,world by</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span lang=EN-IN style='font-size:12.0pt'>adding,</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span lang=EN-IN style='font-size:9.0pt'> </span><span
+  lang=EN-IN style='font-size:12.0pt'>4-read(r)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span lang=EN-IN style='font-size:9.0pt'> </span><span
+  lang=EN-IN style='font-size:12.0pt'>2-write(w)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-IN style='font-size:9.0pt'> </span><span lang=EN-IN
+  style='font-size:12.0pt'>1-execute(x)</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN><img border=0 width=596
+height=470 id="Picture 30" src="%23dday-wsl+bash_files/image024.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN><img border=0 width=601
+height=338 id="Picture 25" src="%23dday-wsl+bash_files/image025.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span lang=EN-IN><img border=0 width=601
+height=338 id="Picture 26" src="%23dday-wsl+bash_files/image026.jpg"></span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:16.0pt;line-height:
+107%;background:white'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:16.0pt;line-height:
+107%;color:black;background:white'>System Info:</span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>date -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Show
+current date and time</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>cal -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Shows
+this month calendar</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>w -&gt; </span><span lang=EN-IN style='font-size:
+16.0pt;line-height:107%;color:gray;background:white'>Display who is on line</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>whoami -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Who you
+are logged in as</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>finger user -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Display
+information about user</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>man command -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Show
+manual command</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>uname -a -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Kernel
+information</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>df -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Disk
+usage</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>du -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Directory
+space usage</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:black;background:white'>free -&gt; </span><span lang=EN-IN
+style='font-size:16.0pt;line-height:107%;color:gray;background:white'>Show
+memory and swap it</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+color:gray;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=638 height=349
+id="Picture 23" src="%23dday-wsl+bash_files/image027.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'> <span
+style='color:gray'>gedit installation</span></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>gedit is a bash notepad where different
+types of scripting are performed,</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>for bash program the extension is .sh while
+for C Shell program the extension is .c.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>Lets start with gedit installation:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>So before if you try to run gedit command
+the following message will be displayed</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 27" src="%23dday-wsl+bash_files/image028.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>Run the following command to install gedit </span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'> $ apt install gedit</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>And wait for the installation to complete</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 28" src="%23dday-wsl+bash_files/image029.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>Press y for the permission and a file of 503
+MB will be installed automatically, wait for the installation to complete</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 29" src="%23dday-wsl+bash_files/image030.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>So here right after when your gedit is
+installed you have to remove openssh-server from your system and then
+re-install it so that it enables port 2000, just follow the command given
+below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'> $ sudo apt-get remove openssh-server</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>And then install openssh-server using the
+command given below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'> $ sudo apt-get install openssh-server</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=346
+id="Picture 31" src="%23dday-wsl+bash_files/image031.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>For few of you openssh may not respond so
+restart the SSH using the given command:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'> $ sudo service ssh full-restart</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>If even after restart your SSH do not
+respond then here we have an alternative way for using it, if openssh do not
+respond after installation go for dropbear approach. Just run the command given
+below and get started:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'> $ sudo apt-get install dropbear</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=338
+id="Picture 32" src="%23dday-wsl+bash_files/image032.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>To run GUI based Linux program you need
+Xming or Cwing as server to operate X server, here is the link to download X
+server for free:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'></span><span lang=EN-IN><a
+href="https://sourceforge.net/projects/xming/"><span style='font-size:16.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif'>https://sourceforge.net/projects/xming/</span></a></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>Download X server from above and you are
+ready with your setup, just install your X server to your WSL with the command:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'> $ sudo apt-get install x11-apps</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>//run this command only after X server
+installation!!</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 33" src="%23dday-wsl+bash_files/image033.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>So finally, we have our environment fully
+set-up, now lets proceed with looping, functions and array in bash</span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:18.0pt;line-height:
+107%;font-family:"Josefin Sans"'>Loops in bash</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:#333333'>Loops allow us
+to take a series of commands and keep re-running them until a particular
+situation is reached. They are useful for automating repetitive tasks.</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:#333333'>There are 3
+basic loop structures in Bash scripting which we'll look at below. There are
+also a few statements which we can use to control the loops operation.</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:#333333'>While loop</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:#333333'>Syntax:</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:10.5pt;font-family:"Segoe UI",sans-serif;
+color:gray;background:#C5E2FF'>while [ &lt;some test&gt; ]</span><span
+lang=EN-IN style='font-size:10.5pt;font-family:"Segoe UI",sans-serif;
+color:gray'><br>
+<span style='background:#C5E2FF'>do</span><br>
+<span style='background:#C5E2FF'>&lt;commands&gt;</span><br>
+<span style='background:#C5E2FF'>done</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>Sample program:</span></p>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>counter=1</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>while [ $counter -le 10 ]</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>do</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo $counter</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>((counter++))</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>done</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo All done</span></p>
+
+</div>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm'>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif'>Untill loop</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif'>Syntax:s</span></p>
+
+<p class=MsoNormal style='line-height:15.0pt;border:none;padding:0cm'><b><span
+lang=EN-IN style='font-size:10.5pt;font-family:"Helvetica",sans-serif;
+color:#555555;background:#C5E2FF'>until [ &lt;some test&gt; ]</span></b><b><span
+lang=EN-IN style='font-size:10.5pt;font-family:"Helvetica",sans-serif;
+color:#555555'><br>
+<span style='background:#C5E2FF'>do</span><br>
+<span style='background:#C5E2FF'>&lt;commands&gt;</span><br>
+<span style='background:#C5E2FF'>done</span></span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Sample Program:</span></p>
+
+</div>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>counter=1</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>until [ $counter -gt 10 ]</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>do</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo $counter</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>((counter++))</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>done</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo All done</span></p>
+
+</div>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm'>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>For loop</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Syntax:s</span></p>
+
+<p class=MsoNormal style='line-height:15.0pt;border:none;padding:0cm'><b><span
+lang=EN-IN style='font-size:10.5pt;font-family:"Helvetica",sans-serif;
+color:#555555;background:#C5E2FF'>for var in &lt;list&gt;</span></b><b><span
+lang=EN-IN style='font-size:10.5pt;font-family:"Helvetica",sans-serif;
+color:#555555'><br>
+<span style='background:#C5E2FF'>do</span><br>
+<span style='background:#C5E2FF'>&lt;commands&gt;</span><br>
+<span style='background:#C5E2FF'>done</span></span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>Sample program:</span></p>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>names='Arvind KRK SRK BRK'</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>for name in $names</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>do</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo $name</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>done</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo All done</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>CONTROL
+STATEMENTS:</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>Break</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>Sample Program:</span></p>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>for value in $1/*</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>do</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>used=$( df $1 | tail -1 | awk '{ print $5 }' | sed 's/%//' )</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>if [ $used -gt 90 ]</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>then</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo Low disk space 1&gt;&amp;2</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>break</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>fi</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>cp $value $1/backup/</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>done</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>Continue</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>Sample Program:</span></p>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>for value in $1/*</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>do</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>if [ ! -r $value ]</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>then</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo $value not readable 1&gt;&amp;2</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>continue</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>fi</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>cp $value $1/backup/</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>done</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>Select</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>Syntax:</span></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><b><span lang=EN-IN style='font-size:10.5pt;font-family:"Helvetica",sans-serif;
+color:#555555;background:#C5E2FF'>select var in &lt;list&gt;</span></b><b><span
+lang=EN-IN style='font-size:10.5pt;font-family:"Helvetica",sans-serif;
+color:#555555'><br>
+<span style='background:#C5E2FF'>do</span><br>
+<span style='background:#C5E2FF'>&lt;commands&gt;</span><br>
+<span style='background:#C5E2FF'>done</span></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:16.5pt;line-height:normal;background:
+white'><span lang=EN-IN style='font-size:16.0pt;color:black'>Sample Program:</span></p>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>names='Kyle Cartman Stan Quit'</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>PS3='Select character: '</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>select name in $names</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>do</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>if [ $name == 'Quit' ]</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>then</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>break</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>fi</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>11.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo Hello $name</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>12.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>done</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>13.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>14.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo Bye</span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:18.0pt;line-height:
+107%;font-family:"Josefin Sans"'>Functions in Bash</span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Function
+in bash are a great way to reuse the code, hence here in this section we will
+be learning about functions and different types of function with sample program
+examples:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>So
+there are two forms in which a user can implement function in bash:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Syntax
+1:</span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:10.5pt;line-height:
+107%;font-family:"Helvetica",sans-serif;color:#555555;background:#C5E2FF'>function_name
+() {</span></b><b><span lang=EN-IN style='font-size:10.5pt;line-height:107%;
+font-family:"Helvetica",sans-serif;color:#555555'><br>
+<span style='background:#C5E2FF'>&lt;commands&gt;</span><br>
+<span style='background:#C5E2FF'>}</span></span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Syntax
+2:</span></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:10.5pt;line-height:
+107%;font-family:"Helvetica",sans-serif;color:#555555;background:#C5E2FF'>function
+function_name {</span></b><b><span lang=EN-IN style='font-size:10.5pt;
+line-height:107%;font-family:"Helvetica",sans-serif;color:#555555'><br>
+<span style='background:#C5E2FF'>&lt;commands&gt;</span><br>
+<span style='background:#C5E2FF'>}</span></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:10.5pt;line-height:
+107%;font-family:"Helvetica",sans-serif;color:#555555;background:#C5E2FF'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Sample
+Program:</span></p>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>print_something () {</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo Hello I am a function</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>}</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>print_something</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>print_something</span></p>
+
+</div>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:24.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;color:gray'>//
+something is a function which is called and printed </span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Parsing Arguments</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>So parsing argument refers to accessing the data
+outside function using $ </span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Sample Program:</span></p>
+
+</div>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>print_something () {</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo Hello $1</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>}</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>print_something Mars</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>print_something Jupiter</span></p>
+
+</div>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:24.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;color:gray'>/* $1
+refers to printing Mars and then $1 triggers Jupiter when function is called
+again*/</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Scope Variables</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Syntax:</span></p>
+
+<p class=MsoNormal style='line-height:15.0pt;border:none;padding:0cm'><b><span
+lang=EN-IN style='font-size:10.5pt;font-family:"Helvetica",sans-serif;
+color:#555555;background:#C5E2FF'>local var_name=&lt;var_value&gt;</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Sample Program:</span></p>
+
+</div>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>var_change () {</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>local var1='local 1'</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo Inside function: var1 is $var1 : var2 is $var2</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>var1='changed again'</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>var2='2 changed again'</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>}</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>var1='global 1'</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>var2='global 2'</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>11.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo Before function call: var1 is $var1 : var2 is $var2</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>12.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>13.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>var_change</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>14.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>15.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>echo After function call: var1 is $var1 : var2 is $var2</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;color:gray'>/* So I
+guess this program is self explanatory for everyone, the above program switches
+var1 and var2 as a global gi=unction and then return back to its original
+state */</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Overriding Commands</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Use of command in a function</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Sample Program:</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>ls () {</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>command ls -lh</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>}</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;border:none;
+padding:0cm'><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>Ls</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><b><span lang=EN-IN
+style='font-size:16.0pt'>Bash Array</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Bash supports one-dimensional numerically indexed and
+associative arrays types. Numerical arrays are referenced using integers, and
+associative are referenced using strings.</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Numerically indexed arrays can be accessed from the
+end using negative indices, the index of -1 references the last element. The
+indices do not have to be contiguous.</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Unlike most of the programming languages, Bash array
+elements dont have to be of the same data type. You can create an array that
+contains both strings and numbers.</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Bash does not support multidimensional arrays, and you
+cant have array elements that are also arrays.</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>There is no limit on the maximum number of elements
+that can be stored in an array.</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Creating Array:</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Indexed array</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'> declare -a array_name</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Method 1 for decleration</span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>array_name[index1]=value1</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>array_name[index2]=value2</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>array_name[indexn]=valuen</span></p>
+
+<div style='border:none;border-bottom:solid #D8F2FB 1.0pt;padding:0cm 0cm 0cm 0cm;
+margin-left:6.75pt;margin-right:0cm'>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:16.0pt'>Method 1 for decleration</span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>array_name=(element1,element2,elementn)</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Array
+Length</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>To
+get the array length perform the following code:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>
+{#array_name[@]}</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Looped
+Array</span></p>
+
+<div style='border:solid #E2E8F0 1.0pt;padding:0cm 0cm 0cm 0cm'>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>declare -a <i>my_array</i>=(
+&quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D )</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><i><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>## Array Loop</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><b><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>for</span></b><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;color:gray'> i in
+&quot;<i>${my_array</i>[@]<i>}</i>&quot;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><b><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>do</span></b><span lang=EN-IN
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;color:gray'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'> <i>echo</i> &quot;<i>$i</i>&quot;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><b><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>done</span></b></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Add
+New Element</span></p>
+
+<div style='border:solid #E2E8F0 1.0pt;padding:0cm 0cm 0cm 0cm'>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>declare -a <i>my_array</i>=(
+&quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D )</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:#F8F8F2'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>## add new elements</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>my_array+=( E )</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>## print all elements</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>echo &quot;${my_array[@]}&quot;</span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>Deleting
+an Element from Array</span></p>
+
+<div style='border:solid #E2E8F0 1.0pt;padding:0cm 0cm 0cm 0cm'>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>declare -a my_array=( &quot;A&quot;
+&quot;B&quot; &quot;C&quot; &quot;D )</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:#F8F8F2'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>## remove element</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>Unset my_array[2]</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>## print all elements</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0cm'><span lang=EN-IN style='font-size:16.0pt;
+font-family:"Segoe UI",sans-serif;color:gray'>echo &quot;${my_array[@]}&quot;</span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>
+</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%'>&nbsp;</span></p>
+
+<h2><a name="_-2.4-_QUIZ"></a><span lang=EN-IN>-2.4- QUIZ</span></h2>
+
+<p class=MsoListParagraphCxSpFirst align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>Which of these is an interface between a user and the kernel?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a. Oracle</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. Window</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. <u>Linux</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. Shell</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>Which command can you use to re-execute a previous command?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a. !cat</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. <u>!!</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. !a</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. !3</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>Which of these commands let you view current jobs being handled by
+Shell?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a.<u> Job</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. View</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. Show</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. Execute</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>What happens when you press ctrl + z?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a. changes undone</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. <u>shell process stops</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. changes redone</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. SIGNIT generated</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>What happens when you use this kill %s command?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a. System Process will stop</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. Jobs with end s terminated</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. Jobs with start s get
+terminated</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. <u>All jobs with command
+beginning with s
+terminated
+</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>What are the types of links in Linux?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a. Soft and Hard</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. Open and Close</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. <u>In-line and External</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. Links and Highlights</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>How will you find the 99th line of a file using only tail and head
+command?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a. tail +99 file1|head +1</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. tail - 99 file1|head -1</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. tail - 99 file1|head +1</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. <u>tail +99 file1|head -1</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>Linux has how many standard streams?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a. 2</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. <u>3</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. 4</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. 5</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>Which of these is not a Linux standard stream?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN><img border=0 width=512 height=288
+id="Picture 34" src="%23dday-wsl+bash_files/image034.jpg"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a. 1</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. 2</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. <u>3</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. 4</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left;text-indent:-18.0pt'><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI",sans-serif;color:gray'>10.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray'>What type of block contains all the information about a file?</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN><img border=0 width=525 height=295
+id="Picture 35" src="%23dday-wsl+bash_files/image035.jpg"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>a. Boot Block</span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>b. <u>Super Block</u></span></p>
+
+<p class=MsoListParagraphCxSpMiddle align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>c. Inode Block</span></p>
+
+<p class=MsoListParagraphCxSpLast align=left style='margin-left:18.0pt;
+text-align:left'><span lang=EN-IN style='font-size:18.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>d. Command Block</span></p>
+
+<h2><span lang=EN-IN>__________________________________________________</span></h2>
+
+<h2><a name="_-3-_BONUS"></a><span lang=EN-IN style='font-size:26.0pt'>-3-
+BONUS</span></h2>
+
+<h2><span lang=EN-IN>__________________________________________________</span></h2>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<h2><a name="_-3.1-_Vim"></a><span lang=EN-IN>-3.1- Vim</span></h2>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>VIM
+is a most popular text editor which is a clone of the Vi text editor, written
+and programmed by </span><span lang=EN-IN style='font-size:18.0pt;line-height:
+107%;font-family:"Segoe UI",sans-serif;color:gray'>Sir Bram Moolenaar. </span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%'>It is a cross platform
+text editor and hard to operate as it is command centric. Available for most
+popular platforms like Windows, Linux, Mac and other UNIX operated system.</span></p>
+
+<p class=MsoListParagraph style='margin-left:72.0pt'><b><span lang=EN-IN
+style='font-size:18.0pt;line-height:107%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-IN style='font-size:18.0pt;line-height:
+107%'>Features of Vim:</span></b></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+38.4pt;text-indent:-18.0pt'><span lang=EN-IN style='font-size:10.0pt;
+font-family:Symbol;color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>Its memory footprint is very low</span></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+38.4pt;text-indent:-18.0pt'><span lang=EN-IN style='font-size:10.0pt;
+font-family:Symbol;color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>It is command centric. You can perform complex text related task
+with few commands</span></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+38.4pt;text-indent:-18.0pt'><span lang=EN-IN style='font-size:10.0pt;
+font-family:Symbol;color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>It is highly configurable and uses simple text file to store its
+configuration</span></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+38.4pt;text-indent:-18.0pt'><span lang=EN-IN style='font-size:10.0pt;
+font-family:Symbol;color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>There are many plug-in available for Vim. Its functionality can be
+extended in great manner using these plug-in</span></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+38.4pt;text-indent:-18.0pt'><span lang=EN-IN style='font-size:10.0pt;
+font-family:Symbol;color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>It supports multiple windows. Using this feature screen can be
+split into multiple windows</span></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+38.4pt;text-indent:-18.0pt'><span lang=EN-IN style='font-size:10.0pt;
+font-family:Symbol;color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>Same as multiple windows, it also supports multiple buffers</span></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+38.4pt;text-indent:-18.0pt'><span lang=EN-IN style='font-size:10.0pt;
+font-family:Symbol;color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>It supports multiple tabs which allows to work on multiple files</span></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+38.4pt;text-indent:-18.0pt'><span lang=EN-IN style='font-size:10.0pt;
+font-family:Symbol;color:black'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>It supports recording features which allows to record and play Vim
+commands in repeated manner</span></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+0cm'><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>&nbsp;</span></p>
+
+<p style='margin-top:6.0pt;margin-right:2.4pt;margin-bottom:7.2pt;margin-left:
+0cm'><b><span lang=EN-IN style='font-size:18.0pt;font-family:"Roboto Slab";
+color:black'>Installation:</span></b></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>So
+we have vim pre-installed in our system as we are using WSL, hence we will be
+moving on with configuration of Vim.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Just
+for reference try running these command in your bash:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Update
+your UBUNTU with the following command:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ sudo apt-get update</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=338
+id="Picture 36" src="%23dday-wsl+bash_files/image036.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Well
+now you have updated your UBUNTU and its the time to install and configure Vim
+in your system, so for installing Vim run the command given below: </span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ sudo apt-get install vim</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Right
+after the installation screen is completed go for the configuration screen by
+running the command given below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ which vim</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=338
+id="Picture 37" src="%23dday-wsl+bash_files/image037.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>usr/bin/vim
+refers to complete installation of vim, heading over to the configuration phase
+2:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Run
+command given below to set vim to home directory:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ echo $HOME</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=347
+id="Picture 38" src="%23dday-wsl+bash_files/image038.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>So,
+now we are done with Vim installation and configuration.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'><img
+border=0 width=618 height=482 src="%23dday-wsl+bash_files/image039.png"
+alt="NOTE:&#13;&#10;Congrats user for getting completed with the configuration and installation of Vim!!&#13;&#10;But here comes the toughest part that you guys will face in using Vim, as mentioned above Vim is a command centric Text editor so you wont be using arrow keys of your keyboard and mouse to navigate. There are a certain set of keywords assigned in Vim&#13;&#10;&#13;&#10;CAUTION:&#13;&#10;Dont try to use arrow key or mouse to navigate once you enter Vim!!!&#13;&#10;"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Moving
+on with Vim:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'></span><i><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%;font-family:"Segoe UI",sans-serif;
+color:gray;background:white'>If youre a programmer or working with structured
+markup languages like HTML, LaTeX, DocBook, etc., Vim is the bees knees. It
+offers a number of features that Ill cover in later installments that make
+working with programming and markup languages much easier.</span></i><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%'></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Welcome
+to Vim!!!</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Get
+started with Vim by typing the command given below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ vim</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=349
+id="Picture 40" src="%23dday-wsl+bash_files/image040.jpg"></span><span
+lang=EN-IN style='font-size:18.0pt;line-height:107%'></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Lets
+check out what help we got from Vim by running the command mentioned below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ :help</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=347
+id="Picture 41" src="%23dday-wsl+bash_files/image041.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Well
+that command really helped us with the navigation in Vim but lets discuss all
+the keywords of Vim to get familiar with it, here are commands of Vim mentioned
+for different kind of operations and functions:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Moving
+with Vim (navigation)</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>h moves the cursor one character to the left.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>j moves the cursor down one line.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>k moves the cursor up one line.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>l moves the cursor one character to the right.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>0 moves the cursor to the beginning of the line.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>$ moves the cursor to the end of the line.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>w move forward one word.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>b move backward one word.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>G move to the end of the file.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>gg move to the beginning of the file.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-left:51.75pt;margin-bottom:
+.0001pt;text-indent:-18.0pt;line-height:normal;background:white'><span
+lang=EN-IN style='font-size:10.0pt;font-family:Symbol;color:gray'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>`. move to the last edit.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Editing</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>d starts the delete operation.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>dw will delete a word.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>d0 will delete to the beginning of a line.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>d$ will delete to the end of a line.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>dgg will delete to the beginning of the file.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>dG will delete to the end of the file.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>u will undo the last operation.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-left:51.75pt;margin-bottom:
+.0001pt;text-indent:-18.0pt;line-height:normal;background:white'><span
+lang=EN-IN style='font-size:10.0pt;font-family:Symbol;color:gray'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>Ctrl-r will redo the last undo.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Search
+and Replace</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>/<i>text</i>&nbsp;search for&nbsp;<i>text</i>&nbsp;in the document,
+going forward.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>n move the cursor to the next instance of the text from the last
+search. This will wrap to the beginning of the document.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>N move the cursor to the previous instance of the text from the
+last search.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>?<i>text</i>&nbsp;search for&nbsp;<i>text</i>&nbsp;in the document,
+going backwards.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>:%s/<i>text</i>/<i>replacement text</i>/g search through the entire
+document for&nbsp;<i>text</i>&nbsp;and replace it with&nbsp;<i>replacement text</i>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-left:51.75pt;margin-bottom:
+.0001pt;text-indent:-18.0pt;line-height:normal;background:white'><span
+lang=EN-IN style='font-size:10.0pt;font-family:Symbol;color:gray'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>:%s/<i>text</i>/<i>replacement text</i>/gc search through the
+entire document and&nbsp;<i>confirm</i>&nbsp;before replacing text.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:16.0pt;line-height:107%;
+font-family:"Segoe UI",sans-serif;color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Copy
+and Paste</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>v highlight one character at a time.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>V highlight one line at a time.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>Ctrl-v highlight by columns.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>p paste text after the current line.</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>P paste text on the current line.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-left:51.75pt;margin-bottom:
+.0001pt;text-indent:-18.0pt;line-height:normal;background:white'><span
+lang=EN-IN style='font-size:10.0pt;font-family:Symbol;color:gray'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>y yank text into the copy buffer.</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Save
+and Quit</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>:q! quit without saving</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>:w save an quit</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>: (enter) last line </span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>:q quit Vim mode</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>ZZ exit/same like :q</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;margin-left:51.75pt;text-indent:
+-18.0pt;line-height:normal;background:white'><span lang=EN-IN style='font-size:
+10.0pt;font-family:Symbol;color:gray'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-IN style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;
+color:gray'>:wq save and quit editor</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Creating
+a file in Vim</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>So
+from above you are familiar with all Vim commands, lets get started with
+creating your first Vim file </span><span lang=EN-IN style='font-size:18.0pt;
+line-height:107%;font-family:"Segoe UI Emoji",sans-serif'>&#128522;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Run
+the command mentioned below to create a file:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ :edit &lt;file_name&gt;.&lt;format&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>//format
+can be .jsx/.txt and many more</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=349
+id="Picture 42" src="%23dday-wsl+bash_files/image042.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Here
+I have created a file name designday.txt and right after I hit enter the
+following will be displayed</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=347
+id="Picture 43" src="%23dday-wsl+bash_files/image043.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>So,
+we have our file ready now, lets enter some content in it. Run the command
+mentioned below to enter content in your file:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ i (enter)</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>//
+i will take you to insert mode of Vim!!</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 44" src="%23dday-wsl+bash_files/image044.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Lets
+enter some content in our file:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 45" src="%23dday-wsl+bash_files/image045.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Quit
+and save your work</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Press
+Esc button first to leave the insert mode and then run the command mentioned
+below to save your work:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ :w</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 46" src="%23dday-wsl+bash_files/image046.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Quit
+Vim before moving on!!</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ :q</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>So
+we have saved and quit our work, lets check out our work by reading our
+created file. Run the command mentioned below to read your file:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ vim &lt;file_name&gt;.&lt;format&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>//Ill
+be opening my designday.txt file here</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 47" src="%23dday-wsl+bash_files/image047.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=601 height=338
+id="Picture 48" src="%23dday-wsl+bash_files/image048.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Editing
+existing file:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Run
+the command used to open an existing file and enter the insert mode by
+running the command mentioned below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ i</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Make
+the changes you want to make in your file and dont forget to save your work by
+running the command mentioned below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>//save</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ :w</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>//quit
+editor</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ :q</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+&lt;or&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>//save
+and quit editor</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ :wq</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Explore
+more of Vim with the site resource given below</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'></span><span
+lang=EN-IN><a href="https://www.tutorialspoint.com/vim/index.htm"><span
+style='font-size:16.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'>https://www.tutorialspoint.com/vim/index.htm</span></a></span><span
+lang=EN-IN style='font-size:16.0pt;line-height:107%;font-family:"Segoe UI",sans-serif'></span></p>
+
+<h2><span lang=EN-IN>&nbsp;</span></h2>
+
+<h2><a name="_-3.2-_ADD-ONS"></a><span lang=EN-IN style='font-size:24.0pt'>-3.2-
+ADD-ONS</span></h2>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>Install
+wsl command line using the command mentioned below:</span></p>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>
+$ apt install wsl</span></p>
+
+<p class=MsoNormal><span lang=EN-IN><img border=0 width=602 height=347
+id="Picture 49" src="%23dday-wsl+bash_files/image049.jpg"></span></p>
+
+<div style='border:none;border-bottom:solid windowtext 1.5pt;padding:0cm 0cm 1.0pt 0cm'>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:18.0pt;line-height:107%'>Get your server certification saved
+with command</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:18.0pt;line-height:107%'> $ wsl xcert</span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN><img
+border=0 width=602 height=344 id="Picture 50"
+src="%23dday-wsl+bash_files/image050.jpg"></span></p>
+
+<p class=MsoNormal style='border:none;padding:0cm'><span lang=EN-IN
+style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-IN style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+</div>
+
+<hr>
+Please take up this quiz to complete this tutorial.
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe5wt0UvcdVksDR0iIAAY1VnEbfHG3o84-y-6CSg9f-Ro9r1g/viewform?embedded=true" width="640" height="3463" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+</body>
+
+</html>

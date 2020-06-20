@@ -1,0 +1,25 @@
+{% extends 'footerless.html' %}
+
+{% block content %}
+    <div class="d-flex flex-row flex-grow-0 flex-shrink-1 flex-fill justify-content-between align-content-center justify-content-lg-center login-dark" id="block" style="/*overflow: hidden;*/background-color: transparent;width: 100vw;height: 100vh;max-height: 100vh;max-width: 100vw;">
+        <div class="text-left d-xl-flex justify-content-xl-start align-items-xl-end" id="image" style="background-image: url(&quot;assets/img/loginic.png&quot;);background-size: cover;background-repeat: no-repeat;background-position: center;max-width: 942px;min-width: 320px;width: 100vw;">
+            <p class="d-xl-flex align-items-xl-end" style="font-size: smaller;color: rgb(255,255,255);padding-left: 0px;margin-left: 10px;">Photo by Hutomo Abrianto on Unsplash</p>
+        </div>
+        <div id="bg-rem" class="text-center d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center" style="width: 100vw;max-width: 1000px;display: flex !important; background: url(../assets/img/bg.jpg);">
+            <form class="text-center d-block" method="post" style="background-color: rgb(255,255,255);margin: 10px;margin-bottom: 10px;margin-left: 10px;width: 100%;padding-left: 40px;padding-right: 40px;max-width: 360px;min-width: 300px;" action="/login">
+                <h2 class="sr-only">Login Form</h2>
+                <div class="illustration" style="padding: 0;margin-bottom: 0px;margin-top: -45px;"><img class="img-fluid" src="assets/img/delit.png"></div>
+                <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username | Email" style="color: rgb(0,0,0);" required="" autofocus="" inputmode="email"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password" style="color: rgb(0,0,0);" required=""></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(20,20,20);">Log In</button></div>
+            </form>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    {% if message == 'No' %}
+    <script>
+        window.alert('Please do check your username and password! 🌝');
+    </script>
+    {% endif %}
+{% endblock%}

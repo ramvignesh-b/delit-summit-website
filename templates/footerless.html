@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>DeLit Summit</title>
+    <meta name="twitter:description" content="Welcom to the #DeLit virtual Summit! Lots and lots of games, webinars, tutorials and events awaits.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="#Delit Summit">
+    <meta property="og:description" content="Welcom to the #DeLit virtual Summit!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../assets/img/pec_logo.png">
+    <meta name="description" content="Welcom to the #DeLit virtual Summit! Lots and lots of games, webinars, tutorials and events awaits.">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon2.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.5.0/united/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+<!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('a83kt7txaivx');
+</script>
+<!-- End of Async Drift Code -->
+</head>
+
+<body>
+    <header>
+    <input
+        type="checkbox"
+        id="main-navigation-toggle"
+        class="btn btn--close"
+        title="Toggle main navigation"
+        style="z-index: 400"
+      />
+      <label for="main-navigation-toggle" style="z-index: 400">
+        <span id="ham" style="text-align: center; font-family: 'Josefin Sans'; z-index: 400"
+          >LINKS</span
+        >
+      </label>
+        <div id="main-navigation" class="nav-main">
+            <div class="d-flex justify-content-center align-items-center menu">
+                <ul class="list-unstyled text-center" style="list-style-type: none;font-size: 60px;font-family: 'Josefin Sans', sans-serif;font-weight: normal;font-style: normal;letter-spacing: 4px;line-height: 100px;">
+                  <li><a href="home">- HOME -</a></li>
+                  <li><a href="webinar">- LIVE -<br/>STREAMING</a></li>
+                  <li><a href="games">- Games -</a></li>
+                  <li><a href="tutorials">- Tutorials -</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main style="width: 100vw;">{% block content %}{% endblock %}</main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.min.js"></script>
+</body>
+
+</html>
